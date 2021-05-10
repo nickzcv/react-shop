@@ -1,7 +1,7 @@
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcryptjs');
 
-const User = require("../models/User");
-const genAccTkn = require("../helpers/genAccessToken");
+const User = require('../models/User');
+const genAccTkn = require('../helpers/genAccessToken');
 const {
   validateRegisterInput,
   validateLoginInput,
@@ -19,7 +19,7 @@ exports.postLogin = async (req, res) => {
         errors,
       });
     }
-
+    console.log(email)
     const user = await User.findOne({
       email,
     });
@@ -31,7 +31,7 @@ exports.postLogin = async (req, res) => {
     }
 
     const isEqual = await bcrypt.compare(password, user.password);
-
+    console.log(isEqual)
     if (!isEqual) {
       return res.status(401).json({
         error: "Email or password isn't matched",
@@ -39,6 +39,7 @@ exports.postLogin = async (req, res) => {
     }
 
     const token = genAccTkn.generateAccessToken(user);
+    console.log(token)
     return res.status(200).json({
       id: user.id,
       token,

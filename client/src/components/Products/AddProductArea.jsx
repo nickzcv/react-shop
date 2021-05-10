@@ -23,13 +23,14 @@ function AddProductArea() {
     formData.append("product_color", product_color);
     formData.append("product_price", product_price);
     formData.append("total_in_stock", product_totalInStock);
-    formData.append("upload_preset", "econix");
+    formData.append("upload_preset", "h6djuzur");
     setErrors(validate(formData));
     
     axios
-      .post("https://api.cloudinary.com/v1_1/dfmn9nhqt/image/upload", formData)
+      .post("https://api.cloudinary.com/v1_1/dbfjc9i9f/image/upload", formData)
       .then((res) => {
         if (res.statusText === "OK") {
+          console.log(res)
           let image_public_id = res.data.public_id;
           formData.append("image_public_id", image_public_id);
           return axios

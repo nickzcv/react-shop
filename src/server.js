@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fileUpload = require('express-fileupload');
+const logger = require('morgan');
 // Database configuration
 const db = require('./config/db');
 // Routing
@@ -15,8 +16,11 @@ const production = process.env.NODE_ENV === 'production';
 require('dotenv').config();
 // Init Express
 const app = express();
+const port = 5000;
 // Load Prod env
 production && app.use(express.static(path.join(__dirname, '../client/build')));
+// Run logger
+app.use(logger('dev'));
 // Parse incoming request bodies in a middleware before your handlers
 // available under the req.body property
 app.use(bodyParser.json());
@@ -27,7 +31,7 @@ app.use(
 );
 // Express middleware for uploading files
 // When you upload a file, the file will be accessible from req.files
-app.use(fileUpload());
+app.use(fileUpload({}));
 // Database connection
 db.connectDb();
 // Routes
@@ -41,4 +45,6 @@ production && (
   })
 )
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || port, function() {
+    console.log('Site started!');
+});
