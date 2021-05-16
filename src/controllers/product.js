@@ -1,5 +1,5 @@
-const Product = require("../models/Product");
-const { cloudinary } = require("../utils/cloudinary");
+const Product = require('../models/Product');
+const { cloudinary } = require('../utils/cloudinary');
 
 exports.fetchProducts = async (req, res) => {
   try {
@@ -15,7 +15,7 @@ exports.fetchProducts = async (req, res) => {
         }
       : {}
   
-    const count = await Product.countDocuments({ ...keyword })
+    const count = await Product.countDocuments({ ...keyword });
     const products = await Product.find({ ...keyword })
       .limit(pageSize)
       .skip(pageSize * (page - 1))
