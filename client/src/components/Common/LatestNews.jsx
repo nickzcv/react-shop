@@ -1,10 +1,10 @@
-import blog1 from "../../assets/img/blog/blog-1.jpg";
-import blog2 from "../../assets/img/blog/blog-2.jpg";
-import blog3 from "../../assets/img/blog/blog-3.jpg";
+import blog1 from '../../assets/img/blog/blog-1.jpg';
+import blog2 from '../../assets/img/blog/blog-2.jpg';
+import blog3 from '../../assets/img/blog/blog-3.jpg';
 
-function LatestNews({ paddingClass = "" }) {
+function LatestNews({ paddingClass = '' }) {
   return (
-    <section className={"blog-area " + paddingClass}>
+    <section className={'blog-area ' + paddingClass}>
       <div className="container">
         <div className="section-title">
           <h2>Latest News</h2>

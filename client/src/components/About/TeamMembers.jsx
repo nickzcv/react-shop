@@ -1,13 +1,13 @@
-import team1 from "../../assets/img/team/team-1.jpg";
-import team2 from "../../assets/img/team/team-2.jpg";
-import team3 from "../../assets/img/team/team-3.jpg";
-import team4 from "../../assets/img/team/team-4.jpg";
-import team5 from "../../assets/img/team/team-5.jpg";
-import team6 from "../../assets/img/team/team-6.jpg";
+import team1 from '../../assets/img/team/team-1.jpg';
+import team2 from '../../assets/img/team/team-2.jpg';
+import team3 from '../../assets/img/team/team-3.jpg';
+import team4 from '../../assets/img/team/team-4.jpg';
+import team5 from '../../assets/img/team/team-5.jpg';
+import team6 from '../../assets/img/team/team-6.jpg';
 
-function TeamMembers({ paddingClass = "" }) {
+function TeamMembers({ paddingClass = '' }) {
   return (
-    <section className={"team-area" + paddingClass}>
+    <section className={'team-area' + paddingClass}>
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-sm-6">

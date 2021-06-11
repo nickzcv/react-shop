@@ -1,8 +1,8 @@
-import LoginArea from "../../components/Auth/LoginArea";
-import PageTitle from "../../components/Common/PageTitle";
+import LoginArea from '../../components/Auth/LoginArea';
+import PageTitle from '../../components/Common/PageTitle';
 
-import Support from "../../components/Common/Support";
-import Footer from "../../components/Footer/Footer";
+import Support from '../../components/Common/Support';
+import Footer from '../../components/Footer/Footer';
 
 function Login() {
   return (

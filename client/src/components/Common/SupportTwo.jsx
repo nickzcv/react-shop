@@ -1,6 +1,6 @@
-function SupportTwo({ paddingClass = "" }) {
+function SupportTwo({ paddingClass = '' }) {
   return (
-    <section className={"support-area" + paddingClass}>
+    <section className={'support-area' + paddingClass}>
       <div className="container">
         <div className="support-inner-item">
           <div className="row">

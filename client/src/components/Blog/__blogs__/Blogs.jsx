@@ -1,9 +1,9 @@
-import blog1 from "../../../assets/img/blog/blog-1.jpg";
-import blog2 from "../../../assets/img/blog/blog-2.jpg";
-import blog3 from "../../../assets/img/blog/blog-3.jpg";
-import blog4 from "../../../assets/img/blog/blog-4.jpg";
-import blog5 from "../../../assets/img/blog/blog-5.jpg";
-import blog6 from "../../../assets/img/blog/blog-6.jpg";
+import blog1 from '../../../assets/img/blog/blog-1.jpg';
+import blog2 from '../../../assets/img/blog/blog-2.jpg';
+import blog3 from '../../../assets/img/blog/blog-3.jpg';
+import blog4 from '../../../assets/img/blog/blog-4.jpg';
+import blog5 from '../../../assets/img/blog/blog-5.jpg';
+import blog6 from '../../../assets/img/blog/blog-6.jpg';
 
 function Blogs() {
   return (
@@ -51,9 +51,7 @@ function Blogs() {
         <div className="blog-content">
           <span>eCommerce</span>
           <h3>
-            <a href="/blog-details">
-              Minimal Design Inspiration Hand Watch
-            </a>
+            <a href="/blog-details">Minimal Design Inspiration Hand Watch</a>
           </h3>
           <div className="post-meta">
             <a href="#">Admin</a> / 19 October 2020

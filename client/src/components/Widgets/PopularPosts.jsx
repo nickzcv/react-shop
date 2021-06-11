@@ -45,9 +45,7 @@ function PopularPosts() {
         </a>
         <div className="info">
           <h4 className="title usmall">
-            <a href="/blog-details">
-              Minimal Design Inspiration Hand Watch
-            </a>
+            <a href="/blog-details">Minimal Design Inspiration Hand Watch</a>
           </h4>
           <span>19 October 2020</span>
         </div>
@@ -59,9 +57,7 @@ function PopularPosts() {
         </a>
         <div className="info">
           <h4 className="title usmall">
-            <a href="/blog-details">
-              I used Work Upcoming Electronic Gadgets
-            </a>
+            <a href="/blog-details">I used Work Upcoming Electronic Gadgets</a>
           </h4>
           <span>19 October 2020</span>
         </div>

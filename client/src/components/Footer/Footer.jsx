@@ -24,7 +24,7 @@ function Footer() {
                     <a href="mailto:hello@econix.com">hello@econix.com</a>
                   </li>
                 </ul>
-                
+
                 <ul className="footer-social">
                   <li>
                     <a href="https://www.facebook.com/" target="_blank">
@@ -65,7 +65,7 @@ function Footer() {
                     <a href="/shop">How to Shop</a>
                   </li>
                   <li>
-                      <a href="/terms-of-service">Terms And Conditions</a>
+                    <a href="/terms-of-service">Terms And Conditions</a>
                   </li>
                   <li>
                     <a href="/privacy-policy">Privacy Policy</a>
@@ -142,8 +142,12 @@ function Footer() {
           <div className="copyright-area-content">
             <p>
               Copyright @2021 Econix. All Rights Reserved by
-              <a href="https://hibootstrap.com/" target="_blank" rel="noreferrer">
-              HiBootstrap
+              <a
+                href="https://hibootstrap.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                HiBootstrap
               </a>
             </p>
           </div>

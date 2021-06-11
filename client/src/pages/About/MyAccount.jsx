@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../../components/Common/Preloader";
-import LoginArea from "../../components/Auth/LoginArea";
-import RegisterArea from "../../components/Auth/RegisterArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Support from "../../components/Common/Support";
-import Footer from "../../components/Footer/Footer";
+import React, { useState, useEffect } from 'react';
+import Preloader from '../../components/Common/Preloader';
+import LoginArea from '../../components/Auth/LoginArea';
+import RegisterArea from '../../components/Auth/RegisterArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Support from '../../components/Common/Support';
+import Footer from '../../components/Footer/Footer';
 
 function MyAccount() {
   const [isLoading, setisLoading] = useState(true);

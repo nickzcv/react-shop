@@ -1,4 +1,4 @@
-import termsOfService from "../../assets/img/terms-of-service.jpg";
+import termsOfService from '../../assets/img/terms-of-service.jpg';
 
 function TermsOfServiceArea() {
   return (

@@ -1,4 +1,4 @@
-import { ORDER_LIST, ORDER_ERROR } from "./OrderTypes";
+import { ORDER_LIST, ORDER_ERROR } from './OrderTypes';
 
 const INITIAL_STATE = {
   orders: [],

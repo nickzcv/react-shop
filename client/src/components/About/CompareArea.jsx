@@ -1,7 +1,7 @@
-import arrivalsProducts1 from "../../assets/img/arrivalsproducts/arrivalsproducts1.jpg";
-import arrivalsProducts2 from "../../assets/img/arrivalsproducts/arrivalsproducts2.jpg";
-import arrivalsProducts3 from "../../assets/img/arrivalsproducts/arrivalsproducts3.jpg";
-import { Link } from "react-router-dom";
+import arrivalsProducts1 from '../../assets/img/arrivalsproducts/arrivalsproducts1.jpg';
+import arrivalsProducts2 from '../../assets/img/arrivalsproducts/arrivalsproducts2.jpg';
+import arrivalsProducts3 from '../../assets/img/arrivalsproducts/arrivalsproducts3.jpg';
+import { Link } from 'react-router-dom';
 
 function CompareArea() {
   return (
@@ -53,7 +53,9 @@ function CompareArea() {
 
                     <div className="arrivals-products-content">
                       <h3>
-                        <Link to="/products-details/60447200e3108c0a9086757c">Smart Watch</Link>
+                        <Link to="/products-details/60447200e3108c0a9086757c">
+                          Smart Watch
+                        </Link>
                       </h3>
                       <ul className="rating">
                         <li>
@@ -111,7 +113,9 @@ function CompareArea() {
 
                     <div className="arrivals-products-content">
                       <h3>
-                        <Link to="/products-details/60447200e3108c0a9086757c">Digital Camera</Link>
+                        <Link to="/products-details/60447200e3108c0a9086757c">
+                          Digital Camera
+                        </Link>
                       </h3>
                       <ul className="rating">
                         <li>
@@ -176,7 +180,9 @@ function CompareArea() {
 
                     <div className="arrivals-products-content">
                       <h3>
-                        <Link to="/products-details/60447200e3108c0a9086757c">Wireless Headphone</Link>
+                        <Link to="/products-details/60447200e3108c0a9086757c">
+                          Wireless Headphone
+                        </Link>
                       </h3>
                       <ul className="rating">
                         <li>

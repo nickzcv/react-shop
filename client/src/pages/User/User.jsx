@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 
-import AuthContext from "../../contexts/auth-context";
-import PageTitle from "../../components/Common/PageTitle";
-import UserArea from "../../components/User/UserArea";
+import AuthContext from '../../contexts/auth-context';
+import PageTitle from '../../components/Common/PageTitle';
+import UserArea from '../../components/User/UserArea';
 
 function User() {
   const [user, setUser] = useState({});

@@ -1,6 +1,6 @@
-import overview1 from "../../../assets/img/overview/overview1.png";
-import overview2 from "../../../assets/img/overview/overview2.png";
-import {Link} from 'react-router-dom';
+import overview1 from '../../../assets/img/overview/overview1.png';
+import overview2 from '../../../assets/img/overview/overview2.png';
+import { Link } from 'react-router-dom';
 
 function Overview() {
   return (
@@ -23,7 +23,7 @@ function Overview() {
                     <span>$499.00</span>
 
                     <div className="overview-btn">
-                    <Link to="/shop" className="default-btn">
+                      <Link to="/shop" className="default-btn">
                         <i className="flaticon-shopping-cart"></i>
                         Shop Now
                         <span></span>

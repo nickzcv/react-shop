@@ -1,4 +1,4 @@
-import { PASSWORD_RESET_SUCCESS, PASSWORD_ERROR } from "./PasswordTypes";
+import { PASSWORD_RESET_SUCCESS, PASSWORD_ERROR } from './PasswordTypes';
 
 const initialState = {
   success: false,
@@ -11,7 +11,7 @@ const PasswordReducer = (state = initialState, action) => {
     case PASSWORD_RESET_SUCCESS:
       return {
         ...state,
-        message: payload
+        message: payload,
       };
 
     case PASSWORD_ERROR:

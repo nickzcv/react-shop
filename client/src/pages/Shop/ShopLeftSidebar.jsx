@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import ShopLeftSidebarArea from "../../components/Shop/ShopLeftSidebarArea";
-import QuickView from "../../components/Products/QuickView";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import ShopLeftSidebarArea from '../../components/Shop/ShopLeftSidebarArea';
+import QuickView from '../../components/Products/QuickView';
 
 function ShopLeftSidebar() {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,7 @@ function ShopLeftSidebar() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })
@@ -33,7 +33,7 @@ function ShopLeftSidebar() {
   return (
     <div className="shop-left-sidebar-wrapper">
       <PageTitle title="Shop Left Sidebar" />
-      <ShopLeftSidebarArea products={products} showQuickView={showQuickView}/>
+      <ShopLeftSidebarArea products={products} showQuickView={showQuickView} />
       <Partner paddingClass=" pbt-50" />
       <Footer />
       <QuickView isOpen={isOpen} closeModal={closeModal} product={product} />

@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import ShopListViewArea from "../../components/Shop/ShopListViewArea";
-import QuickView from "../../components/Products/QuickView";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import ShopListViewArea from '../../components/Shop/ShopListViewArea';
+import QuickView from '../../components/Products/QuickView';
 
 function ShopListView() {
   const [products, setProducts] = useState([]);
@@ -23,7 +23,7 @@ function ShopListView() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })
@@ -33,7 +33,7 @@ function ShopListView() {
   return (
     <div className="shop-list-view-wrapper">
       <PageTitle title="Shop List View" />
-      <ShopListViewArea products={products}  showQuickView={showQuickView} />
+      <ShopListViewArea products={products} showQuickView={showQuickView} />
       <Partner paddingClass=" pbt-50" />
       <Footer />
       <QuickView isOpen={isOpen} closeModal={closeModal} product={product} />

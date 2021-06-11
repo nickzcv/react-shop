@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Image } from "cloudinary-react";
-import shop1 from "../../assets/img/shop/shop-1.jpg";
+import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
+import shop1 from '../../assets/img/shop/shop-1.jpg';
 
 function ShopFullWidthArea({ products = [], showQuickView }) {
   return (

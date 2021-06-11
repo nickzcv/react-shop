@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Image } from "cloudinary-react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Image } from 'cloudinary-react';
+import { Link } from 'react-router-dom';
 
 function BestSellers({
   paddingClass = null,
@@ -8,14 +8,14 @@ function BestSellers({
   showQuickView,
   addToCart,
 }) {
-  const [filterBy, setFilterBy] = useState("cameras");
+  const [filterBy, setFilterBy] = useState('cameras');
 
   const filterBestSellers = (filterBy) => {
     setFilterBy(filterBy);
   };
 
   return (
-    <section className={"bestsellers-area " + paddingClass}>
+    <section className={'bestsellers-area ' + paddingClass}>
       <div className="container">
         <div className="section-title">
           <h2>Bestsellers</h2>
@@ -24,71 +24,71 @@ function BestSellers({
         <div className="tab bestsellers-list-tab">
           <ul className="tabs">
             <li
-              onClick={() => filterBestSellers("cameras")}
+              onClick={() => filterBestSellers('cameras')}
               className={`tab-item${
-                filterBy === "cameras" ? " tab-active" : ""
+                filterBy === 'cameras' ? ' tab-active' : ''
               }`}
             >
               <span>Cameras</span>
             </li>
             <li
-              onClick={() => filterBestSellers("electronics")}
+              onClick={() => filterBestSellers('electronics')}
               className={`tab-item${
-                filterBy === "electronics" ? " tab-active" : ""
+                filterBy === 'electronics' ? ' tab-active' : ''
               }`}
             >
               <span>Electronics</span>
             </li>
             <li
-              onClick={() => filterBestSellers("audio")}
-              className={`tab-item${filterBy === "audio" ? " tab-active" : ""}`}
+              onClick={() => filterBestSellers('audio')}
+              className={`tab-item${filterBy === 'audio' ? ' tab-active' : ''}`}
             >
               <span>Audio</span>
             </li>
             <li
-              onClick={() => filterBestSellers("computers")}
+              onClick={() => filterBestSellers('computers')}
               className={`tab-item${
-                filterBy === "computers" ? " tab-active" : ""
+                filterBy === 'computers' ? ' tab-active' : ''
               }`}
             >
               <span>Computers</span>
             </li>
             <li
-              onClick={() => filterBestSellers("accessories")}
+              onClick={() => filterBestSellers('accessories')}
               className={`tab-item${
-                filterBy === "accessories" ? " tab-active" : ""
+                filterBy === 'accessories' ? ' tab-active' : ''
               }`}
             >
               <span>Accessories</span>
             </li>
             <li
-              onClick={() => filterBestSellers("laptop")}
+              onClick={() => filterBestSellers('laptop')}
               className={`tab-item${
-                filterBy === "laptop" ? " tab-active" : ""
+                filterBy === 'laptop' ? ' tab-active' : ''
               }`}
             >
               <span>Laptop</span>
             </li>
             <li
-              onClick={() => filterBestSellers("watches")}
+              onClick={() => filterBestSellers('watches')}
               className={`tab-item${
-                filterBy === "watches" ? " tab-active" : ""
+                filterBy === 'watches' ? ' tab-active' : ''
               }`}
             >
               <span>Watches</span>
             </li>
             <li
-              onClick={() => filterBestSellers("mobile")}
+              onClick={() => filterBestSellers('mobile')}
               className={`tab-item${
-                filterBy === "mobile" ? " tab-active" : ""
+                filterBy === 'mobile' ? ' tab-active' : ''
               }`}
             >
               <span>Mobile</span>
             </li>
             <li
-              onClick={() => filterBestSellers("headphone")}
+              onClick={() => filterBestSellers('headphone')}
               className={`tab-item${
-                filterBy === "headphone" ? " tab-active" : ""
+                filterBy === 'headphone' ? ' tab-active' : ''
               }`}
             >
               <span>Headphone</span>

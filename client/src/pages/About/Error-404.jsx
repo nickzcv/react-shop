@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../../components/Common/Preloader";
-import ErrorArea from "../../components/About/ErrorArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Footer from "../../components/Footer/Footer";
+import React, { useState, useEffect } from 'react';
+import Preloader from '../../components/Common/Preloader';
+import ErrorArea from '../../components/About/ErrorArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Footer from '../../components/Footer/Footer';
 
 function Error404() {
   const [isLoading, setisLoading] = useState(true);

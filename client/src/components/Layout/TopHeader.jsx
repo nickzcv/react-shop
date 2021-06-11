@@ -1,19 +1,19 @@
-import React, { useContext } from "react";
-import { Link, withRouter } from "react-router-dom";
-import AuthContext from "../../contexts/auth-context";
-import english from "../../assets/img/english.png";
-import germany from "../../assets/img/germany.png";
-import arab from "../../assets/img/arab.png";
-import portugal from "../../assets/img/portugal.png";
-import china from "../../assets/img/china.png";
-import "./TopHeader.scss";
+import React, { useContext } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import AuthContext from '../../contexts/auth-context';
+import english from '../../assets/img/english.png';
+import germany from '../../assets/img/germany.png';
+import arab from '../../assets/img/arab.png';
+import portugal from '../../assets/img/portugal.png';
+import china from '../../assets/img/china.png';
+import './TopHeader.scss';
 
 function TopHeader({ shippingMessage, history }) {
   const context = useContext(AuthContext);
 
   const handleLogout = () => {
     context.logout();
-    history.push("/login");
+    history.push('/login');
   };
 
   return (
@@ -88,7 +88,7 @@ function TopHeader({ shippingMessage, history }) {
               <li>
                 <i className="bx bxs-lock-alt"></i>
                 <span>
-                  {!context.token && <Link to="/login">Login</Link>} Or{" "}
+                  {!context.token && <Link to="/login">Login</Link>} Or{' '}
                   {!context.token && <Link to="/register">Register</Link>}
                   {context.token && (
                     <button className="logout-btn" onClick={handleLogout}>

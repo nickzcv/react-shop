@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Arrival() {
   return (
@@ -9,7 +9,7 @@ function Arrival() {
         <p>Stock is Limited</p>
 
         <div className="inner-btn">
-        <Link to="/shop" className="default-btn">
+          <Link to="/shop" className="default-btn">
             <i className="flaticon-shopping-cart"></i>
             Shop Now
             <span></span>

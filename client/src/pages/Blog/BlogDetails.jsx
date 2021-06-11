@@ -1,6 +1,6 @@
-import BlogDetailsArea from "../../components/Blog/BlogDetailsArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Footer from "../../components/Footer/Footer";
+import BlogDetailsArea from '../../components/Blog/BlogDetailsArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Footer from '../../components/Footer/Footer';
 
 function BlogDetails() {
   return (

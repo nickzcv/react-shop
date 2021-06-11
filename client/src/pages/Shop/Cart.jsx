@@ -1,6 +1,6 @@
-import PageTitle from "../../components/Common/PageTitle";
-import Footer from "../../components/Footer/Footer";
-import CartArea from "../../components/Shop/CartArea";
+import PageTitle from '../../components/Common/PageTitle';
+import Footer from '../../components/Footer/Footer';
+import CartArea from '../../components/Shop/CartArea';
 
 function Cart() {
   return (

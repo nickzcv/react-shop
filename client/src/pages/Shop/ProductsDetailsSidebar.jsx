@@ -1,7 +1,7 @@
-import PageTitle from "../../components/Common/PageTitle";
-import ProductsDetailsSidebarArea from "../../components/Shop/ProductsDetailsSidebarArea";
-import Footer from "../../components/Footer/Footer";
-import NewArrivals from "../../components/Common/NewArrivals";
+import PageTitle from '../../components/Common/PageTitle';
+import ProductsDetailsSidebarArea from '../../components/Shop/ProductsDetailsSidebarArea';
+import Footer from '../../components/Footer/Footer';
+import NewArrivals from '../../components/Common/NewArrivals';
 
 function ProductsDetailsSidebar() {
   return (

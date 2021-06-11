@@ -1,8 +1,8 @@
-import Categories from "../Widgets/Categories";
-import PopularPosts from "../Widgets/PopularPosts";
-import PopularTags from "../Widgets/PopularTags";
-import Search from "../Widgets/Search";
-import Blogs from "./__blogs__/Blogs";
+import Categories from '../Widgets/Categories';
+import PopularPosts from '../Widgets/PopularPosts';
+import PopularTags from '../Widgets/PopularTags';
+import Search from '../Widgets/Search';
+import Blogs from './__blogs__/Blogs';
 
 function BlogLeftSidebarArea() {
   return (

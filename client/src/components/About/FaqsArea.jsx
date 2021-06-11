@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Data } from "./Data";
+import React, { useState } from 'react';
+import { Data } from './Data';
 
 function FaqsArea() {
   const [clicked, setClicked] = useState(false);
@@ -26,7 +26,7 @@ function FaqsArea() {
         <div className="tab faqs-list-tab">
           <ul className="tabs">
             <li
-              className={toggleState === 1 ? "current" : ""}
+              className={toggleState === 1 ? 'current' : ''}
               onClick={() => toggleTab(1)}
             >
               <a href="#" onClick={(event) => event.preventDefault()}>
@@ -35,7 +35,7 @@ function FaqsArea() {
             </li>
 
             <li
-              className={toggleState === 2 ? "current" : ""}
+              className={toggleState === 2 ? 'current' : ''}
               onClick={() => toggleTab(2)}
             >
               <a href="#" onClick={(event) => event.preventDefault()}>
@@ -44,7 +44,7 @@ function FaqsArea() {
             </li>
 
             <li
-              className={toggleState === 3 ? "current" : ""}
+              className={toggleState === 3 ? 'current' : ''}
               onClick={() => toggleTab(3)}
             >
               <a href="#" onClick={(event) => event.preventDefault()}>
@@ -59,7 +59,7 @@ function FaqsArea() {
                 <div
                   key={index}
                   className={
-                    toggleState === 1 ? "show at-item" : "accordion-display"
+                    toggleState === 1 ? 'show at-item' : 'accordion-display'
                   }
                 >
                   <div className="faq-accordion">
@@ -93,7 +93,7 @@ function FaqsArea() {
               return (
                 <div
                   className={
-                    toggleState === 2 ? "show at-item" : "accordion-display"
+                    toggleState === 2 ? 'show at-item' : 'accordion-display'
                   }
                   key={index}
                 >
@@ -128,7 +128,7 @@ function FaqsArea() {
               return (
                 <div
                   className={
-                    toggleState === 3 ? "show at-item" : "accordion-display"
+                    toggleState === 3 ? 'show at-item' : 'accordion-display'
                   }
                   key={index}
                 >

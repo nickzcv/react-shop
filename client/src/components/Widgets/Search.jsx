@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../../components/Common/Preloader";
+import React, { useState, useEffect } from 'react';
+import Preloader from '../../components/Common/Preloader';
 
 function Search() {
   const [isLoading, setisLoading] = useState(true);

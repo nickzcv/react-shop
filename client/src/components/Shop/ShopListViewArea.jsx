@@ -1,12 +1,12 @@
-import Search from "../Widgets/Search";
-import Categories from "../Widgets/Categories";
-import Price from "../Widgets/Price";
-import Continents from "../Widgets/Continents";
-import BestSellerProducts from "../Widgets/BestSellerProducts";
-import Arrival from "../Widgets/Arrival";
-import Products from "./__products__/Products";
+import Search from '../Widgets/Search';
+import Categories from '../Widgets/Categories';
+import Price from '../Widgets/Price';
+import Continents from '../Widgets/Continents';
+import BestSellerProducts from '../Widgets/BestSellerProducts';
+import Arrival from '../Widgets/Arrival';
+import Products from './__products__/Products';
 
-function ShopListViewArea({ products = [],  showQuickView }) {
+function ShopListViewArea({ products = [], showQuickView }) {
   return (
     <section className="shop-area pt-50 pb-50">
       <div className="container">

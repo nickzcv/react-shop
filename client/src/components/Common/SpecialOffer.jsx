@@ -1,17 +1,22 @@
-import { useState, useEffect } from "react";
-import { Image } from "cloudinary-react";
-import { Link } from "react-router-dom";
-import offerProducts7 from "../../assets/img/offer-products/offer-products-7.png";
-import largeOfferProducts from "../../assets/img/offer-products/large-offer-products.png";
+import { useState, useEffect } from 'react';
+import { Image } from 'cloudinary-react';
+import { Link } from 'react-router-dom';
+import offerProducts7 from '../../assets/img/offer-products/offer-products-7.png';
+import largeOfferProducts from '../../assets/img/offer-products/large-offer-products.png';
 
-function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickView }) {
-  const [days, setDays] = useState("");
-  const [hours, setHours] = useState("");
-  const [minutes, setMinutes] = useState("");
-  const [seconds, setSeconds] = useState("");
+function SpecialOffer({
+  paddingClass = '',
+  products = [],
+  addToCart,
+  showQuickView,
+}) {
+  const [days, setDays] = useState('');
+  const [hours, setHours] = useState('');
+  const [minutes, setMinutes] = useState('');
+  const [seconds, setSeconds] = useState('');
 
   const comingSoonTime = () => {
-    let endTime = new Date("August 23, 2022 17:00:00 PDT");
+    let endTime = new Date('August 23, 2022 17:00:00 PDT');
     let endTimeParse = Date.parse(endTime) / 1000;
     let now = new Date();
     let nowParse = Date.parse(now) / 1000;
@@ -24,14 +29,14 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
     let countseconds = Math.floor(
       timeLeft - countdays * 86400 - counthours * 3600 - countminutes * 60
     );
-    if (counthours < "10") {
-      counthours = "0" + counthours;
+    if (counthours < '10') {
+      counthours = '0' + counthours;
     }
-    if (countminutes < "10") {
-      countminutes = "0" + countminutes;
+    if (countminutes < '10') {
+      countminutes = '0' + countminutes;
     }
-    if (countseconds < "10") {
-      countseconds = "0" + countseconds;
+    if (countseconds < '10') {
+      countseconds = '0' + countseconds;
     }
 
     setDays(countdays);
@@ -47,7 +52,7 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
   }, []);
 
   return (
-    <section className={"offer-products-area" + paddingClass}>
+    <section className={'offer-products-area' + paddingClass}>
       <div className="container">
         <div className="section-title">
           <h2>Specials Offer</h2>
@@ -58,9 +63,9 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
             {products && products.length > 0 && (
               <div className="single-offer-products">
                 <div className="offer-products-image">
-                <a>
-                  <img src={largeOfferProducts} alt="image" />
-                </a>
+                  <a>
+                    <img src={largeOfferProducts} alt="image" />
+                  </a>
                   <div className="tag">-50%</div>
                 </div>
 
@@ -84,8 +89,6 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
                       <i className="bx bxs-star"></i>
                     </li>
                   </ul>
-
-                  
                 </div>
 
                 <div className="offer-soon-content">
@@ -148,7 +151,10 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
 
                           <ul className="offer-action">
                             <li>
-                              <span className="addtocart-icon-wrap" onClick={() => addToCart(product)}>
+                              <span
+                                className="addtocart-icon-wrap"
+                                onClick={() => addToCart(product)}
+                              >
                                 <i className="flaticon-shopping-cart"></i>
                               </span>
                             </li>
@@ -158,7 +164,10 @@ function SpecialOffer({ paddingClass = "", products = [], addToCart, showQuickVi
                               </a>
                             </li>
                             <li>
-                              <span className="quickview-icon-wrap quick-icon" onClick={() => showQuickView(product)}>
+                              <span
+                                className="quickview-icon-wrap quick-icon"
+                                onClick={() => showQuickView(product)}
+                              >
                                 <i className="flaticon-view"></i>
                               </span>
                             </li>

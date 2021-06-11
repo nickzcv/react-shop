@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Preloader from "../../components/Common/Preloader";
-import TermsOfServiceArea from "../../components/About/TermsOfServiceArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Support from "../../components/Common/Support";
-import Footer from "../../components/Footer/Footer";
+import React, { useState, useEffect } from 'react';
+import Preloader from '../../components/Common/Preloader';
+import TermsOfServiceArea from '../../components/About/TermsOfServiceArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Support from '../../components/Common/Support';
+import Footer from '../../components/Footer/Footer';
 
 function TermsOfService() {
   const [isLoading, setisLoading] = useState(true);

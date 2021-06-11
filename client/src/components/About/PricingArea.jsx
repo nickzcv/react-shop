@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function PricingArea({ paddingClass }) {
-
   const [toggleState, setToggleState] = useState(1);
 
   const toggleTab = (index) => {
@@ -9,24 +8,30 @@ function PricingArea({ paddingClass }) {
   };
 
   return (
-    <section className={"pricing-area" + paddingClass}>
+    <section className={'pricing-area' + paddingClass}>
       <div className="container">
         <div className="tab pricing-list-tab">
           <ul className="tabs">
-            <li className={toggleState === 1 ? "current" : ""}
-              onClick={() => toggleTab(1)}>
+            <li
+              className={toggleState === 1 ? 'current' : ''}
+              onClick={() => toggleTab(1)}
+            >
               <a>Monthly</a>
             </li>
 
-            <li className={toggleState === 2 ? "current" : ""}
-              onClick={() => toggleTab(2)}>
+            <li
+              className={toggleState === 2 ? 'current' : ''}
+              onClick={() => toggleTab(2)}
+            >
               <a>Yearly</a>
             </li>
           </ul>
           <div className="tab_content">
-            <div className={
-                    toggleState === 1 ? "show tabs_item" : "accordion-display"
-                  }>
+            <div
+              className={
+                toggleState === 1 ? 'show tabs_item' : 'accordion-display'
+              }
+            >
               <div className="row">
                 <div className="col-lg-4 col-sm-6">
                   <div className="single-pricing-table">
@@ -216,9 +221,7 @@ function PricingArea({ paddingClass }) {
               </div>
             </div>
 
-            <div className={
-                    toggleState === 2 ? "show" : "accordion-display"
-                  }>
+            <div className={toggleState === 2 ? 'show' : 'accordion-display'}>
               <div className="row">
                 <div className="col-lg-4 col-sm-6">
                   <div className="single-pricing-table">

@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { Image } from "cloudinary-react";
+import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
 
-function Products({ products,showQuickView }) {
+function Products({ products, showQuickView }) {
   return (
     <>
       <div className="products-filter-options">

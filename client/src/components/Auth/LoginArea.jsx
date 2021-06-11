@@ -1,9 +1,9 @@
-import React, { useRef, useState, useContext } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React, { useRef, useState, useContext } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-import AuthContext from "../../contexts/auth-context";
+import AuthContext from '../../contexts/auth-context';
 
-function LoginArea({ customClass = "", history }) {
+function LoginArea({ customClass = '', history }) {
   const email = useRef();
   const password = useRef();
   const [alertMsg, setAlertMsg] = useState(null);
@@ -11,9 +11,9 @@ function LoginArea({ customClass = "", history }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    fetch("/user/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    fetch('/user/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: email.current.value,
         password: password.current.value,
@@ -22,16 +22,16 @@ function LoginArea({ customClass = "", history }) {
       .then((res) => res.json())
       .then((res) => {
         if (res.id) {
-          email.current.value = "";
-          password.current.value = "";
+          email.current.value = '';
+          password.current.value = '';
           context.login(res.token, res.id, res.tokenExpiration);
-          localStorage.setItem("token", JSON.stringify(res.token));
-          localStorage.setItem("userId", JSON.stringify(res.id));
+          localStorage.setItem('token', JSON.stringify(res.token));
+          localStorage.setItem('userId', JSON.stringify(res.id));
           localStorage.setItem(
-            "tokenExpiration",
+            'tokenExpiration',
             JSON.stringify(res.tokenExpiration)
           );
-          history.push("/");
+          history.push('/');
         } else if (res.error) {
           setAlertMsg(res.error);
         } else if (res.errors) {
@@ -43,7 +43,7 @@ function LoginArea({ customClass = "", history }) {
   };
 
   return (
-    <div className={"login-form" + customClass}>
+    <div className={'login-form' + customClass}>
       {alertMsg &&
         (Array.isArray(alertMsg) ? (
           <div className="alert alert-danger" role="alert">

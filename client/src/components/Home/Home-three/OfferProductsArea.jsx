@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Image } from "cloudinary-react";
-import offerProducts4 from "../../../assets/img/offer-products/offer-products-4.jpg";
-import offerProducts7 from "../../../assets/img/offer-products/offer-products-7.png";
-import largeOfferProducts from "../../../assets/img/offer-products/large-offer-products.png";
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
+import offerProducts4 from '../../../assets/img/offer-products/offer-products-4.jpg';
+import offerProducts7 from '../../../assets/img/offer-products/offer-products-7.png';
+import largeOfferProducts from '../../../assets/img/offer-products/large-offer-products.png';
 
 function OfferProductsArea({ products = [], addToCart, showQuickView }) {
-  const [days, setDays] = useState("");
-  const [hours, setHours] = useState("");
-  const [minutes, setMinutes] = useState("");
-  const [seconds, setSeconds] = useState("");
+  const [days, setDays] = useState('');
+  const [hours, setHours] = useState('');
+  const [minutes, setMinutes] = useState('');
+  const [seconds, setSeconds] = useState('');
 
   const comingSoonTime = () => {
-    let endTime = new Date("August 23, 2022 17:00:00 PDT");
+    let endTime = new Date('August 23, 2022 17:00:00 PDT');
     let endTimeParse = Date.parse(endTime) / 1000;
     let now = new Date();
     let nowParse = Date.parse(now) / 1000;
@@ -25,14 +25,14 @@ function OfferProductsArea({ products = [], addToCart, showQuickView }) {
     let countseconds = Math.floor(
       timeLeft - countdays * 86400 - counthours * 3600 - countminutes * 60
     );
-    if (counthours < "10") {
-      counthours = "0" + counthours;
+    if (counthours < '10') {
+      counthours = '0' + counthours;
     }
-    if (countminutes < "10") {
-      countminutes = "0" + countminutes;
+    if (countminutes < '10') {
+      countminutes = '0' + countminutes;
     }
-    if (countseconds < "10") {
-      countseconds = "0" + countseconds;
+    if (countseconds < '10') {
+      countseconds = '0' + countseconds;
     }
 
     setDays(countdays);
@@ -179,50 +179,43 @@ function OfferProductsArea({ products = [], addToCart, showQuickView }) {
                     <i className="bx bxs-star"></i>
                   </li>
                 </ul>
-
-                
-
-                
               </div>
 
               <div className="offer-soon-content">
+                <div
+                  id="timer"
+                  className="flex-wrap d-flex justify-content-center"
+                >
                   <div
-                    id="timer"
-                    className="flex-wrap d-flex justify-content-center"
+                    id="days"
+                    className="align-items-center flex-column d-flex justify-content-center"
                   >
-                    <div
-                      id="days"
-                      className="align-items-center flex-column d-flex justify-content-center"
-                    >
-                      {days}
-                      <span>Days</span>
-                    </div>
-                    <div
-                      id="hours"
-                      className="align-items-center flex-column d-flex justify-content-center"
-                    >
-                      {hours}
-                      <span>Hours</span>
-                    </div>
-                    <div
-                      id="minutes"
-                      className="align-items-center flex-column d-flex justify-content-center"
-                    >
-                      {minutes}
-                      <span>Minutes</span>
-                    </div>
-                    <div
-                      id="seconds"
-                      className="align-items-center flex-column d-flex justify-content-center"
-                    >
-                      {seconds}
-                      <span>Seconds</span>
-                    </div>
+                    {days}
+                    <span>Days</span>
+                  </div>
+                  <div
+                    id="hours"
+                    className="align-items-center flex-column d-flex justify-content-center"
+                  >
+                    {hours}
+                    <span>Hours</span>
+                  </div>
+                  <div
+                    id="minutes"
+                    className="align-items-center flex-column d-flex justify-content-center"
+                  >
+                    {minutes}
+                    <span>Minutes</span>
+                  </div>
+                  <div
+                    id="seconds"
+                    className="align-items-center flex-column d-flex justify-content-center"
+                  >
+                    {seconds}
+                    <span>Seconds</span>
                   </div>
                 </div>
-
-
-
+              </div>
             </div>
           </div>
         </div>

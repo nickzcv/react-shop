@@ -1,14 +1,13 @@
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import partner1 from "../../assets/img/partner/partner-1.png";
-import partner2 from "../../assets/img/partner/partner-2.png";
-import partner3 from "../../assets/img/partner/partner-3.png";
-import partner4 from "../../assets/img/partner/partner-4.png";
-import partner5 from "../../assets/img/partner/partner-5.png";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import partner1 from '../../assets/img/partner/partner-1.png';
+import partner2 from '../../assets/img/partner/partner-2.png';
+import partner3 from '../../assets/img/partner/partner-3.png';
+import partner4 from '../../assets/img/partner/partner-4.png';
+import partner5 from '../../assets/img/partner/partner-5.png';
 
-function Partner({ paddingClass = "" }) {
-
+function Partner({ paddingClass = '' }) {
   const options = {
     loop: true,
     margin: 0,
@@ -27,23 +26,16 @@ function Partner({ paddingClass = "" }) {
         items: 2,
       },
 
-      1000:{
-        items: 4
-      }
-
+      1000: {
+        items: 4,
+      },
     },
   };
 
-
   return (
-    <div className={"partner-area" + paddingClass}>
+    <div className={'partner-area' + paddingClass}>
       <div className="container">
-        <OwlCarousel
-          className="owl-theme"
-          margin={20}
-        {...options}
-
-        >
+        <OwlCarousel className="owl-theme" margin={20} {...options}>
           <div className="partner-item">
             <a href="#">
               <img src={partner1} alt="image" />

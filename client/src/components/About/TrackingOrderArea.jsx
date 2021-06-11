@@ -1,4 +1,4 @@
-import trackOrder from "../../assets/img/track-order.jpg";
+import trackOrder from '../../assets/img/track-order.jpg';
 
 function TrackingOrderArea() {
   return (

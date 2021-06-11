@@ -1,15 +1,15 @@
-import { useState, useEffect, useContext } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect, useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 //action
-import { listProducts } from "../../redux/Product/ProductAction";
+import { listProducts } from '../../redux/Product/ProductAction';
 
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import ShopArea from "../../components/Shop/ShopArea";
-import QuickView from "../../components/Products/QuickView";
-import cartContext from "../../contexts/cart-context";
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import ShopArea from '../../components/Shop/ShopArea';
+import QuickView from '../../components/Products/QuickView';
+import cartContext from '../../contexts/cart-context';
 
 function Shop({ match }) {
   const keyword = match.params.keyword;
@@ -59,7 +59,7 @@ function Shop({ match }) {
         addToCart={addToCart}
         pages={pages}
         page={page}
-        keyword={keyword ? keyword : ""}
+        keyword={keyword ? keyword : ''}
         showQuickView={showQuickView}
       />
 

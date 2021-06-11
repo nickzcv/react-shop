@@ -1,6 +1,6 @@
-function StoryArea({ paddingClass = "" }) {
+function StoryArea({ paddingClass = '' }) {
   return (
-    <section className={"story-area" + paddingClass}>
+    <section className={'story-area' + paddingClass}>
       <div className="container">
         <div className="story-title">
           <h2>We handle All Service Activities with Customers in Mind</h2>

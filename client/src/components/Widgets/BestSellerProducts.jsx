@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function BestSellerProducts() {
   return (
@@ -11,7 +11,9 @@ function BestSellerProducts() {
         </a>
         <div className="info">
           <h4 className="title usmall">
-            <Link to="/products-details/60447200e3108c0a9086757c">Action Camera</Link>
+            <Link to="/products-details/60447200e3108c0a9086757c">
+              Action Camera
+            </Link>
           </h4>
           <span>June 10, 2020</span>
           <ul className="rating">
@@ -40,7 +42,9 @@ function BestSellerProducts() {
         </a>
         <div className="info">
           <h4 className="title usmall">
-            <Link to="/products-details/60447200e3108c0a9086757c">Digital Camera</Link>
+            <Link to="/products-details/60447200e3108c0a9086757c">
+              Digital Camera
+            </Link>
           </h4>
           <span>June 10, 2020</span>
           <ul className="rating">
@@ -69,7 +73,9 @@ function BestSellerProducts() {
         </a>
         <div className="info">
           <h4 className="title usmall">
-            <Link to="/products-details/60447200e3108c0a9086757c">Wireless Headphone</Link>
+            <Link to="/products-details/60447200e3108c0a9086757c">
+              Wireless Headphone
+            </Link>
           </h4>
           <span>June 10, 2020</span>
           <ul className="rating">

@@ -1,6 +1,6 @@
-import BlogLeftSidebarArea from "../../components/Blog/BlogLeftSidbarArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Footer from "../../components/Footer/Footer";
+import BlogLeftSidebarArea from '../../components/Blog/BlogLeftSidbarArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Footer from '../../components/Footer/Footer';
 
 function BlogLeftSidebar() {
   return (

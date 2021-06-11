@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Countdown from "react-countdown";
-import Preloader from "../../components/Common/Preloader";
-import ComingSoonArea from "../../components/About/ComingSoonArea";
+import React, { useState, useEffect } from 'react';
+import Countdown from 'react-countdown';
+import Preloader from '../../components/Common/Preloader';
+import ComingSoonArea from '../../components/About/ComingSoonArea';
 
 const ComingSoon = () => {
   const [isLoading, setisLoading] = useState(true);

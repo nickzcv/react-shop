@@ -115,15 +115,15 @@ function ContactArea() {
 
               <ul className="contact-list">
                 <li>
-                  <i className="bx bx-map"></i> Address:{" "}
+                  <i className="bx bx-map"></i> Address:{' '}
                   <span>4848 Hershell Hollow Road, Bothell, WA 89076</span>
                 </li>
                 <li>
-                  <i className="bx bx-phone-call"></i> Phone:{" "}
+                  <i className="bx bx-phone-call"></i> Phone:{' '}
                   <a href="tel:+15143214567">+1 (514) 321-4567</a>
                 </li>
                 <li>
-                  <i className="bx bx-envelope"></i> Email:{" "}
+                  <i className="bx bx-envelope"></i> Email:{' '}
                   <a href="mailto:hello@econix.com">hello@econix.com</a>
                 </li>
               </ul>

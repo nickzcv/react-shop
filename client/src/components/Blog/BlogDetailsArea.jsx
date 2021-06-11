@@ -1,10 +1,10 @@
-import blogDetails from "../../assets/img/blog-details.jpg";
-import team1 from "../../assets/img/team/team-1.jpg";
-import team3 from "../../assets/img/team/team-3.jpg";
-import Categories from "../Widgets/Categories";
-import PopularPosts from "../Widgets/PopularPosts";
-import PopularTags from "../Widgets/PopularTags";
-import Search from "../Widgets/Search";
+import blogDetails from '../../assets/img/blog-details.jpg';
+import team1 from '../../assets/img/team/team-1.jpg';
+import team3 from '../../assets/img/team/team-3.jpg';
+import Categories from '../Widgets/Categories';
+import PopularPosts from '../Widgets/PopularPosts';
+import PopularTags from '../Widgets/PopularTags';
+import Search from '../Widgets/Search';
 
 function BlogDetailsArea() {
   return (

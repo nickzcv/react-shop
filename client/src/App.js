@@ -1,73 +1,73 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
-import Home from "./pages/Home/Home";
-import HomeTwo from "./pages/Home/HomeTwo";
-import HomeThree from "./pages/Home/HomeThree";
-import HomeFour from "./pages/Home/HomeFour";
-import About from "./pages/About/About";
+import Home from './pages/Home/Home';
+import HomeTwo from './pages/Home/HomeTwo';
+import HomeThree from './pages/Home/HomeThree';
+import HomeFour from './pages/Home/HomeFour';
+import About from './pages/About/About';
 import Search from './pages/About/Search';
-import Login from "./pages/Authentications/Login";
-import Register from "./pages/Authentications/Register";
-import ResetPassword from "./pages/Authentications/ResetPassword";
-import OurTeam from "./pages/About/OurTeam";
-import PricingPlans from "./pages/About/PricingPlans";
-import Contact from "./pages/About/Contact";
-import Faqs from "./pages/About/Faqs";
-import Error404 from "./pages/About/Error-404";
-import TrackingOrder from "./pages/About/TrackingOrder";
-import Compare from "./pages/About/Compare";
-import TermsOfService from "./pages/About/TermsOfService";
-import PrivacyPolicy from "./pages/About/PrivacyPolicy";
-import MyAccount from "./pages/About/MyAccount";
-import Shop from "./pages/Shop/Shop";
-import ShopListView from "./pages/Shop/ShopListView";
-import ShopLeftSidebar from "./pages/Shop/ShopLeftSidebar";
-import ShopRightSidebar from "./pages/Shop/ShopRightSidebar";
-import ShopFullWidth from "./pages/Shop/ShopFullWidth";
-import Cart from "./pages/Shop/Cart";
-import Orders from "./pages/Shop/Orders";
-import WishList from "./pages/Shop/WishList";
-import Checkout from "./pages/Shop/Checkout";
-import ProductsDetails from "./pages/Shop/ProductsDetails";
-import ProductsDetailsSidebar from "./pages/Shop/ProductsDetailsSidebar";
-import Blog from "./pages/Blog/Blog";
-import BlogListView from "./pages/Blog/BlogListView";
-import BlogLeftSidebar from "./pages/Blog/BlogLeftSidebar";
-import BlogRightSidebar from "./pages/Blog/BlogRightSidebar";
-import BlogFullWidth from "./pages/Blog/BlogFullWidth";
-import BlogDetails from "./pages/Blog/BlogDetails";
-import AddProduct from "./pages/Products/AddProduct";
-import User from "./pages/User/User";
-import Products from "./pages/Products/Products";
-import ComingSoon from "./pages/About/ComingSoon";
+import Login from './pages/Authentications/Login';
+import Register from './pages/Authentications/Register';
+import ResetPassword from './pages/Authentications/ResetPassword';
+import OurTeam from './pages/About/OurTeam';
+import PricingPlans from './pages/About/PricingPlans';
+import Contact from './pages/About/Contact';
+import Faqs from './pages/About/Faqs';
+import Error404 from './pages/About/Error-404';
+import TrackingOrder from './pages/About/TrackingOrder';
+import Compare from './pages/About/Compare';
+import TermsOfService from './pages/About/TermsOfService';
+import PrivacyPolicy from './pages/About/PrivacyPolicy';
+import MyAccount from './pages/About/MyAccount';
+import Shop from './pages/Shop/Shop';
+import ShopListView from './pages/Shop/ShopListView';
+import ShopLeftSidebar from './pages/Shop/ShopLeftSidebar';
+import ShopRightSidebar from './pages/Shop/ShopRightSidebar';
+import ShopFullWidth from './pages/Shop/ShopFullWidth';
+import Cart from './pages/Shop/Cart';
+import Orders from './pages/Shop/Orders';
+import WishList from './pages/Shop/WishList';
+import Checkout from './pages/Shop/Checkout';
+import ProductsDetails from './pages/Shop/ProductsDetails';
+import ProductsDetailsSidebar from './pages/Shop/ProductsDetailsSidebar';
+import Blog from './pages/Blog/Blog';
+import BlogListView from './pages/Blog/BlogListView';
+import BlogLeftSidebar from './pages/Blog/BlogLeftSidebar';
+import BlogRightSidebar from './pages/Blog/BlogRightSidebar';
+import BlogFullWidth from './pages/Blog/BlogFullWidth';
+import BlogDetails from './pages/Blog/BlogDetails';
+import AddProduct from './pages/Products/AddProduct';
+import User from './pages/User/User';
+import Products from './pages/Products/Products';
+import ComingSoon from './pages/About/ComingSoon';
 
-import AuthContext from "./contexts/auth-context";
-import CartContext from "./contexts/cart-context";
+import AuthContext from './contexts/auth-context';
+import CartContext from './contexts/cart-context';
 
-import MiddleHeader from "./components/Layout/MiddleHeader";
-import ShopArea from "./components/Shop/ShopArea";
-import Navbar from "./components/Layout/Navbar";
-import TopHeader from "./components/Layout/TopHeader";
+import MiddleHeader from './components/Layout/MiddleHeader';
+import ShopArea from './components/Shop/ShopArea';
+import Navbar from './components/Layout/Navbar';
+import TopHeader from './components/Layout/TopHeader';
 
 function App() {
   const [token, setToken] = useState(null);
-  const [userId, setUserId] = useState("");
-  const [tokenExpiration, setTokenExpiration] = useState("");
+  const [userId, setUserId] = useState('');
+  const [tokenExpiration, setTokenExpiration] = useState('');
   const [cartItems, setCartItems] = useState([]);
-  const [test,setTest] = useState(null);
+  const [test, setTest] = useState(null);
 
   useEffect(() => {
-    const _token = JSON.parse(localStorage.getItem("token"));
-    const tokenExp = JSON.parse(localStorage.getItem("tokenExpiration"));
-    const userIdLocal = JSON.parse(localStorage.getItem("userId"));
+    const _token = JSON.parse(localStorage.getItem('token'));
+    const tokenExp = JSON.parse(localStorage.getItem('tokenExpiration'));
+    const userIdLocal = JSON.parse(localStorage.getItem('userId'));
     if (_token && userIdLocal && tokenExp) {
       setToken(_token);
       setUserId(userIdLocal);
       setTokenExpiration(tokenExp);
     }
-    const _cartItems = JSON.parse(localStorage.getItem("cart-items"));
+    const _cartItems = JSON.parse(localStorage.getItem('cart-items'));
     if (_cartItems && _cartItems.length > 0) {
       setCartItems(_cartItems);
     }
@@ -83,9 +83,9 @@ function App() {
     setToken(null);
     setUserId(null);
     setTokenExpiration(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("userId");
-    localStorage.removeItem("tokenExpiration");
+    localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    localStorage.removeItem('tokenExpiration');
   };
 
   const addItemToCart = (product) => {
@@ -105,22 +105,21 @@ function App() {
     if (exist) {
       console.log(newState);
       setCartItems(newState);
-      localStorage.setItem("cart-items", JSON.stringify(newState));
+      localStorage.setItem('cart-items', JSON.stringify(newState));
     } else {
       localStorage.setItem(
-        "cart-items",
+        'cart-items',
         JSON.stringify([...cartItems, product])
       );
       setCartItems([...cartItems, product]);
     }
-
   };
 
   const removeItemFromCart = (id) => {
     let _cartItems = [...cartItems];
     let index = _cartItems.findIndex((cart) => cart._id === id);
     _cartItems.splice(index, 1);
-    localStorage.setItem("cart-items", JSON.stringify(_cartItems));
+    localStorage.setItem('cart-items', JSON.stringify(_cartItems));
     setCartItems(_cartItems);
 
     setTest(id);

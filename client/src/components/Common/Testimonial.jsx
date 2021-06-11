@@ -1,10 +1,10 @@
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-function Testimonial({ paddingClass = "" }) {
+function Testimonial({ paddingClass = '' }) {
   return (
-    <section className={"testimonial-area" + paddingClass}>
+    <section className={'testimonial-area' + paddingClass}>
       <div className="container">
         <OwlCarousel
           className="owl-theme"

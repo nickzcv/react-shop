@@ -1,48 +1,48 @@
-import axios from "axios";
-import React, { useContext, useEffect, useState } from "react";
-import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
+import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, NavLink, useLocation, useHistory } from 'react-router-dom';
 
-import logo2 from "../../assets/img/logo-2.png";
-import AuthContext from "../../contexts/auth-context";
+import logo2 from '../../assets/img/logo-2.png';
+import AuthContext from '../../contexts/auth-context';
 
-const homeRoutes = ["/", "/home-two", "/home-three", "/home-four"];
+const homeRoutes = ['/', '/home-two', '/home-three', '/home-four'];
 const pagesRoutes = [
-  "/about",
-  "/our-team",
-  "/pricing-plans",
-  "/search",
-  "/contact",
-  "/faqs",
-  "/login",
-  "/register",
-  "/my-account",
-  "/error-404",
-  "/tracking-order",
-  "/compare",
-  "/terms-of-service",
-  "/privacy-policy",
+  '/about',
+  '/our-team',
+  '/pricing-plans',
+  '/search',
+  '/contact',
+  '/faqs',
+  '/login',
+  '/register',
+  '/my-account',
+  '/error-404',
+  '/tracking-order',
+  '/compare',
+  '/terms-of-service',
+  '/privacy-policy',
 ];
 const shopRoutes = [
-  "/shop",
-  "/shop-list-view",
-  "/shop-left-sidebar",
-  "/shop-right-sidebar",
-  "/shop-full-width",
-  "/cart",
-  "/wishlist",
-  "/checkout",
-  "/products-details",
-  "/products-details-sidebar",
+  '/shop',
+  '/shop-list-view',
+  '/shop-left-sidebar',
+  '/shop-right-sidebar',
+  '/shop-full-width',
+  '/cart',
+  '/wishlist',
+  '/checkout',
+  '/products-details',
+  '/products-details-sidebar',
 ];
 const blogRoutes = [
-  "/blog",
-  "/blog-list-view",
-  "/blog-left-sidebar",
-  "/blog-right-sidebar",
-  "/blog-full-width",
-  "/blog-details",
+  '/blog',
+  '/blog-list-view',
+  '/blog-left-sidebar',
+  '/blog-right-sidebar',
+  '/blog-full-width',
+  '/blog-details',
 ];
-const productsRoutes = ["/products", "/add-product"];
+const productsRoutes = ['/products', '/add-product'];
 
 function Navbar() {
   const [user, setUser] = useState({});
@@ -85,22 +85,22 @@ function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [visible, handleScroll]);
 
   const handleLogout = () => {
     context.logout();
-    history.push("/login");
+    history.push('/login');
   };
 
   return (
-    <div className={`navbar-area ${visible ? "is-sticky sticky-active" : ""}`}>
-      <div className={showMenu ? "main-navbar show" : "main-navbar"}>
+    <div className={`navbar-area ${visible ? 'is-sticky sticky-active' : ''}`}>
+      <div className={showMenu ? 'main-navbar show' : 'main-navbar'}>
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light">
-            <div className={"navbar-category"}>
+            <div className={'navbar-category'}>
               <div className="collapse navbar-collapse">
                 <ul className="navbar-nav">
                   <li className="nav-item respo-nav">
@@ -188,7 +188,7 @@ function Navbar() {
               <ul className="navbar-nav responsive-menu">
                 <li className="nav-item">
                   <NavLink
-                    to={"/"}
+                    to={'/'}
                     isActive={() => homeRoutes.includes(pathname)}
                     className="nav-link"
                   >
@@ -197,25 +197,25 @@ function Navbar() {
                   </NavLink>
                   <ul className="dropdown-menu">
                     <li className="nav-item">
-                      <NavLink to={"/"} className="nav-link">
+                      <NavLink to={'/'} className="nav-link">
                         Home
                       </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <NavLink to={"/home-two"} className="nav-link">
+                      <NavLink to={'/home-two'} className="nav-link">
                         Home Two
                       </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <NavLink to={"/home-three"} className="nav-link">
+                      <NavLink to={'/home-three'} className="nav-link">
                         Home Three
                       </NavLink>
                     </li>
 
                     <li className="nav-item">
-                      <NavLink to={"/home-four"} className="nav-link">
+                      <NavLink to={'/home-four'} className="nav-link">
                         Home Four
                       </NavLink>
                     </li>
@@ -238,20 +238,20 @@ function Navbar() {
                           <div className="col">
                             <ul className="megamenu-submenu">
                               <li>
-                                <NavLink to={"/about"} className="nav-link">
+                                <NavLink to={'/about'} className="nav-link">
                                   About Us
                                 </NavLink>
                               </li>
 
                               <li>
-                                <NavLink to={"/our-team"} className="nav-link">
+                                <NavLink to={'/our-team'} className="nav-link">
                                   Our Team
                                 </NavLink>
                               </li>
 
                               <li>
                                 <NavLink
-                                  to={"/pricing-plans"}
+                                  to={'/pricing-plans'}
                                   className="nav-link"
                                 >
                                   Pricing Plans
@@ -259,13 +259,13 @@ function Navbar() {
                               </li>
 
                               <li>
-                                <NavLink to={"/search"} className="nav-link">
+                                <NavLink to={'/search'} className="nav-link">
                                   Search
                                 </NavLink>
                               </li>
 
                               <li>
-                                <NavLink to={"/contact"} className="nav-link">
+                                <NavLink to={'/contact'} className="nav-link">
                                   Contact Us
                                 </NavLink>
                               </li>
@@ -275,7 +275,7 @@ function Navbar() {
                           <div className="col">
                             <ul className="megamenu-submenu">
                               <li>
-                                <NavLink to={"/faqs"} className="nav-link">
+                                <NavLink to={'/faqs'} className="nav-link">
                                   FAQ's
                                 </NavLink>
                               </li>
@@ -504,7 +504,7 @@ function Navbar() {
                         // isActive={() => shopRoutes.includes(pathname)}
                         className="nav-link"
                       >
-                        {user && <i class="bx bxs-user"></i>}{" "}
+                        {user && <i class="bx bxs-user"></i>}{' '}
                         <i className="bx bx-chevron-down chevron-display"></i>
                         <span className="plus_icon">+</span>
                       </NavLink>
@@ -598,7 +598,7 @@ function Navbar() {
             )}
           </div>
 
-          <div className={active ? "active container" : "container"}>
+          <div className={active ? 'active container' : 'container'}>
             <div className="option-inner">
               <div className="others-option d-flex align-items-center">
                 <div className="option-item">

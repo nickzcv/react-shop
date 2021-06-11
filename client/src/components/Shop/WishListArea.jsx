@@ -1,9 +1,9 @@
-import cart1 from "../../assets/img/cart/cart-1.png";
-import cart2 from "../../assets/img/cart/cart-2.png";
-import cart3 from "../../assets/img/cart/cart-3.png";
-import cart4 from "../../assets/img/cart/cart-4.png";
-import cart5 from "../../assets/img/cart/cart-5.png";
-import { Link } from "react-router-dom";
+import cart1 from '../../assets/img/cart/cart-1.png';
+import cart2 from '../../assets/img/cart/cart-2.png';
+import cart3 from '../../assets/img/cart/cart-3.png';
+import cart4 from '../../assets/img/cart/cart-4.png';
+import cart5 from '../../assets/img/cart/cart-5.png';
+import { Link } from 'react-router-dom';
 
 function WishListArea() {
   return (
@@ -30,7 +30,9 @@ function WishListArea() {
                 </td>
 
                 <td className="product-name">
-                  <Link to="/products-details/60447200e3108c0a9086757c">Bluetooth Headphone</Link>
+                  <Link to="/products-details/60447200e3108c0a9086757c">
+                    Bluetooth Headphone
+                  </Link>
                 </td>
 
                 <td className="product-price">
@@ -64,7 +66,9 @@ function WishListArea() {
                 </td>
 
                 <td className="product-name">
-                  <Link to="/products-details/60447200e3108c0a9086757c">Protable Speakers</Link>
+                  <Link to="/products-details/60447200e3108c0a9086757c">
+                    Protable Speakers
+                  </Link>
                 </td>
 
                 <td className="product-price">
@@ -98,7 +102,9 @@ function WishListArea() {
                 </td>
 
                 <td className="product-name">
-                  <Link to="/products-details/60447200e3108c0a9086757c">Digital Camera</Link>
+                  <Link to="/products-details/60447200e3108c0a9086757c">
+                    Digital Camera
+                  </Link>
                 </td>
 
                 <td className="product-price">
@@ -132,7 +138,9 @@ function WishListArea() {
                 </td>
 
                 <td className="product-name">
-                  <Link to="/products-details/60447200e3108c0a9086757c">Smart Watch</Link>
+                  <Link to="/products-details/60447200e3108c0a9086757c">
+                    Smart Watch
+                  </Link>
                 </td>
 
                 <td className="product-price">

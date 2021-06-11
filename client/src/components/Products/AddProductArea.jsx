@@ -1,54 +1,54 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
 import validate from './validateinfo';
 
 function AddProductArea() {
-  const [product_name, setProductName] = useState("");
-  const [product_description, setProductDescription] = useState("");
-  const [product_images, setProductImages] = useState("");
-  const [product_type, setProductType] = useState("");
-  const [product_color, setProductColor] = useState("");
-  const [product_price, setProductPrice] = useState("");
-  const [product_totalInStock, setTotalInStock] = useState("");
-  const [message, setMessage] = useState("");
+  const [product_name, setProductName] = useState('');
+  const [product_description, setProductDescription] = useState('');
+  const [product_images, setProductImages] = useState('');
+  const [product_type, setProductType] = useState('');
+  const [product_color, setProductColor] = useState('');
+  const [product_price, setProductPrice] = useState('');
+  const [product_totalInStock, setTotalInStock] = useState('');
+  const [message, setMessage] = useState('');
   const [errors, setErrors] = useState({});
 
   const handleAddProduct = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("product_name", product_name);
-    formData.append("product_description", product_description);
-    formData.append("file", product_images);
-    formData.append("product_type", product_type);
-    formData.append("product_color", product_color);
-    formData.append("product_price", product_price);
-    formData.append("total_in_stock", product_totalInStock);
-    formData.append("upload_preset", "h6djuzur");
+    formData.append('product_name', product_name);
+    formData.append('product_description', product_description);
+    formData.append('file', product_images);
+    formData.append('product_type', product_type);
+    formData.append('product_color', product_color);
+    formData.append('product_price', product_price);
+    formData.append('total_in_stock', product_totalInStock);
+    formData.append('upload_preset', 'h6djuzur');
     setErrors(validate(formData));
-    
+
     axios
-      .post("https://api.cloudinary.com/v1_1/dbfjc9i9f/image/upload", formData)
+      .post('https://api.cloudinary.com/v1_1/dbfjc9i9f/image/upload', formData)
       .then((res) => {
-        if (res.statusText === "OK") {
-          console.log(res)
+        if (res.statusText === 'OK') {
+          console.log(res);
           let image_public_id = res.data.public_id;
-          formData.append("image_public_id", image_public_id);
+          formData.append('image_public_id', image_public_id);
           return axios
-            .post("/products/add-product", formData, {
+            .post('/products/add-product', formData, {
               headers: {
-                "Content-Type": "multipart/form-data",
+                'Content-Type': 'multipart/form-data',
               },
             })
             .then((res) => {
-              if (res.data.message === "Product added") {
-                setMessage(product_name + " added");
-                setProductName("");
-                setProductDescription("");
-                setProductType("");
-                setProductImages("");
-                setProductColor("");
-                setProductPrice("");
-                setTotalInStock("");
+              if (res.data.message === 'Product added') {
+                setMessage(product_name + ' added');
+                setProductName('');
+                setProductDescription('');
+                setProductType('');
+                setProductImages('');
+                setProductColor('');
+                setProductPrice('');
+                setTotalInStock('');
                 setErrors('');
               }
             });
@@ -61,7 +61,7 @@ function AddProductArea() {
     <div className="add-product-area-wrap ptb-50">
       <div className="container">
         <div className="add-product-form">
-          {message !== "" && (
+          {message !== '' && (
             <div className={`alert alert-success`} role="alert">
               {message}
             </div>
@@ -79,7 +79,9 @@ function AddProductArea() {
                 value={product_name}
                 onChange={(e) => setProductName(e.target.value)}
               />
-              {product_name ==='' && <p className="error_color">{errors.product_name}</p>}
+              {product_name === '' && (
+                <p className="error_color">{errors.product_name}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_description">Product Description</label>
@@ -90,7 +92,9 @@ function AddProductArea() {
                 onChange={(e) => setProductDescription(e.target.value)}
                 placeholder="Description"
               ></textarea>
-              {product_description === '' && <p className="error_color">{errors.product_description}</p>}
+              {product_description === '' && (
+                <p className="error_color">{errors.product_description}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_images">Product Images</label>
@@ -100,7 +104,9 @@ function AddProductArea() {
                 accept="image/*"
                 onChange={(e) => setProductImages(e.target.files[0])}
               />
-              {product_images === '' && <p className="error_color">{errors.product_images}</p>}
+              {product_images === '' && (
+                <p className="error_color">{errors.product_images}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_type">Product Type</label>
@@ -121,7 +127,9 @@ function AddProductArea() {
                 <option value="watches">Watches</option>
                 <option value="headphone">Headphone</option>
               </select>
-              {product_type === '' && <p className="error_color">{errors.product_type}</p>}
+              {product_type === '' && (
+                <p className="error_color">{errors.product_type}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_color">Product Color</label>
@@ -133,7 +141,9 @@ function AddProductArea() {
                 value={product_color}
                 onChange={(e) => setProductColor(e.target.value)}
               />
-              {product_color === '' && <p className="error_color">{errors.product_color}</p>}
+              {product_color === '' && (
+                <p className="error_color">{errors.product_color}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_price">Product Price</label>
@@ -145,7 +155,9 @@ function AddProductArea() {
                 value={product_price}
                 onChange={(e) => setProductPrice(e.target.value)}
               />
-               {product_price === '' && <p className="error_color">{errors.product_price}</p>}
+              {product_price === '' && (
+                <p className="error_color">{errors.product_price}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="product_totalInStock">Total in stock</label>
@@ -157,9 +169,14 @@ function AddProductArea() {
                 value={product_totalInStock}
                 onChange={(e) => setTotalInStock(e.target.value)}
               />
-              {product_totalInStock === '' && <p className="error_color">{errors.product_totalInStock}</p>}
+              {product_totalInStock === '' && (
+                <p className="error_color">{errors.product_totalInStock}</p>
+              )}
             </div>
-            <button className="add-product-btn"><i className="flaticon-shopping-cart add-product-btn-icon"></i>Add Product</button>
+            <button className="add-product-btn">
+              <i className="flaticon-shopping-cart add-product-btn-icon"></i>Add
+              Product
+            </button>
           </form>
         </div>
       </div>

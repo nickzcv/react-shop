@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import errorImg from "../../assets/img/404.png";
+import { Link } from 'react-router-dom';
+import errorImg from '../../assets/img/404.png';
 
 function ErrorArea() {
   return (

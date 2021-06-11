@@ -1,6 +1,6 @@
-import React from "react";
-import PageTitle from "../../components/Common/PageTitle";
-import AddProductArea from "../../components/Products/AddProductArea";
+import React from 'react';
+import PageTitle from '../../components/Common/PageTitle';
+import AddProductArea from '../../components/Products/AddProductArea';
 
 function AddProduct() {
   return (

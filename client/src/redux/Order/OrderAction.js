@@ -1,5 +1,5 @@
-import axios from "axios";
-import { ORDER_ERROR, ORDER_LIST } from "./OrderTypes";
+import axios from 'axios';
+import { ORDER_ERROR, ORDER_LIST } from './OrderTypes';
 
 export const listOrders = () => async (dispatch) => {
   try {

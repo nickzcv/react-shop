@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
-import { Image } from "cloudinary-react";
+import { Link } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
 
-function SpecialProducts({ 
-  paddingClass = "", 
+function SpecialProducts({
+  paddingClass = '',
   products = [],
   addToCart,
   showQuickView,
 }) {
   return (
-    <section className={"special-products-area " + paddingClass}>
+    <section className={'special-products-area ' + paddingClass}>
       <div className="container">
         <div className="row">
           <div className="col-lg-9 col-md-12">
@@ -35,7 +35,10 @@ function SpecialProducts({
                           <div className="tag">New</div>
                           <ul className="special-action">
                             <li>
-                              <span className="addtocart-icon-wrap" onClick={() => addToCart(product)}>
+                              <span
+                                className="addtocart-icon-wrap"
+                                onClick={() => addToCart(product)}
+                              >
                                 <i className="flaticon-shopping-cart"></i>
                               </span>
                             </li>
@@ -45,7 +48,10 @@ function SpecialProducts({
                               </a>
                             </li>
                             <li>
-                              <span className="quick-icon" onClick={() => showQuickView(product)}>
+                              <span
+                                className="quick-icon"
+                                onClick={() => showQuickView(product)}
+                              >
                                 <i className="flaticon-view quick-icon"></i>
                               </span>
                             </li>

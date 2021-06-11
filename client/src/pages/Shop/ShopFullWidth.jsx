@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import ShopFullWidthArea from "../../components/Shop/ShopFullWidthArea";
-import QuickView from "../../components/Products/QuickView";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import ShopFullWidthArea from '../../components/Shop/ShopFullWidthArea';
+import QuickView from '../../components/Products/QuickView';
 
 function ShopFullWidth() {
   const [products, setProducts] = useState([]);
@@ -13,7 +13,7 @@ function ShopFullWidth() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })
@@ -30,11 +30,10 @@ function ShopFullWidth() {
     setProduct({});
   };
 
-
   return (
     <div className="shop-full-width-wrapper">
       <PageTitle title="Shop Full Width" />
-      <ShopFullWidthArea products={products} showQuickView={showQuickView}/>
+      <ShopFullWidthArea products={products} showQuickView={showQuickView} />
       <Partner paddingClass=" ptb-50" />
       <Footer />
       <QuickView isOpen={isOpen} closeModal={closeModal} product={product} />

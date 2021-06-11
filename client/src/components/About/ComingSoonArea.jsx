@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const ComingSoonArea = ({ days, hours, minutes, seconds }) => {
   return (
@@ -12,19 +12,31 @@ const ComingSoonArea = ({ days, hours, minutes, seconds }) => {
                 <div
                   id="days"
                   class="align-items-center flex-column d-flex justify-content-center"
-                >{days}<span>Days</span></div> 
+                >
+                  {days}
+                  <span>Days</span>
+                </div>
                 <div
                   id="hours"
                   class="align-items-center flex-column d-flex justify-content-center"
-                >{hours}<span>Hours</span></div>
+                >
+                  {hours}
+                  <span>Hours</span>
+                </div>
                 <div
                   id="minutes"
                   class="align-items-center flex-column d-flex justify-content-center"
-                >{minutes}<span>Minutes</span></div>
+                >
+                  {minutes}
+                  <span>Minutes</span>
+                </div>
                 <div
                   id="seconds"
                   class="align-items-center flex-column d-flex justify-content-center"
-                >{seconds}<span>Seconds</span></div>
+                >
+                  {seconds}
+                  <span>Seconds</span>
+                </div>
               </div>
               <form class="newsletter-form" data-toggle="validator">
                 <div class="form-group">

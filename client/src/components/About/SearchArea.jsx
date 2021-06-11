@@ -1,8 +1,8 @@
-import arrivalsProducts1 from "../../assets/img/arrivalsproducts/arrivalsproducts1.jpg";
-import arrivalsProducts2 from "../../assets/img/arrivalsproducts/arrivalsproducts2.jpg";
-import arrivalsProducts3 from "../../assets/img/arrivalsproducts/arrivalsproducts3.jpg";
-import arrivalsProducts4 from "../../assets/img/arrivalsproducts/arrivalsproducts4.jpg";
-import { Link } from "react-router-dom";
+import arrivalsProducts1 from '../../assets/img/arrivalsproducts/arrivalsproducts1.jpg';
+import arrivalsProducts2 from '../../assets/img/arrivalsproducts/arrivalsproducts2.jpg';
+import arrivalsProducts3 from '../../assets/img/arrivalsproducts/arrivalsproducts3.jpg';
+import arrivalsProducts4 from '../../assets/img/arrivalsproducts/arrivalsproducts4.jpg';
+import { Link } from 'react-router-dom';
 
 function SearchArea() {
   return (
@@ -57,7 +57,9 @@ function SearchArea() {
 
                 <div className="arrivals-products-content">
                   <h3>
-                    <Link to="/products-details/60447200e3108c0a9086757c">Smart Watch</Link>
+                    <Link to="/products-details/60447200e3108c0a9086757c">
+                      Smart Watch
+                    </Link>
                   </h3>
                   <ul className="rating">
                     <li>
@@ -113,7 +115,9 @@ function SearchArea() {
 
                 <div className="arrivals-products-content">
                   <h3>
-                    <Link to="/products-details/60447200e3108c0a9086757c">Digital Camera</Link>
+                    <Link to="/products-details/60447200e3108c0a9086757c">
+                      Digital Camera
+                    </Link>
                   </h3>
                   <ul className="rating">
                     <li>
@@ -169,7 +173,9 @@ function SearchArea() {
 
                 <div className="arrivals-products-content">
                   <h3>
-                    <Link to="/products-details/60447200e3108c0a9086757c">Wireless Headphone</Link>
+                    <Link to="/products-details/60447200e3108c0a9086757c">
+                      Wireless Headphone
+                    </Link>
                   </h3>
                   <ul className="rating">
                     <li>
@@ -225,7 +231,9 @@ function SearchArea() {
 
                 <div className="arrivals-products-content">
                   <h3>
-                    <Link to="/products-details/60447200e3108c0a9086757c">Bluetooth Speaker</Link>
+                    <Link to="/products-details/60447200e3108c0a9086757c">
+                      Bluetooth Speaker
+                    </Link>
                   </h3>
                   <ul className="rating">
                     <li>

@@ -1,6 +1,6 @@
-function VisionArea({ paddingClass = "" }) {
+function VisionArea({ paddingClass = '' }) {
   return (
-    <section className={"vision-area" + paddingClass}>
+    <section className={'vision-area' + paddingClass}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6">

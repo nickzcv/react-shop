@@ -1,12 +1,12 @@
-import Arrival from "../Widgets/Arrival";
-import BestSellerProducts from "../Widgets/BestSellerProducts";
-import Categories from "../Widgets/Categories";
-import Continents from "../Widgets/Continents";
-import Price from "../Widgets/Price";
-import Search from "../Widgets/Search";
-import Products from "./__products__/Products";
+import Arrival from '../Widgets/Arrival';
+import BestSellerProducts from '../Widgets/BestSellerProducts';
+import Categories from '../Widgets/Categories';
+import Continents from '../Widgets/Continents';
+import Price from '../Widgets/Price';
+import Search from '../Widgets/Search';
+import Products from './__products__/Products';
 
-function ShopLeftSidebarArea({ products = [],showQuickView }) {
+function ShopLeftSidebarArea({ products = [], showQuickView }) {
   return (
     <section className="shop-area bg-ffffff pt-50 pb-50">
       <div className="container">
@@ -40,7 +40,7 @@ function ShopLeftSidebarArea({ products = [],showQuickView }) {
           </div>
 
           <div className="col-lg-8 col-md-12">
-            <Products products={products} showQuickView={showQuickView}/>
+            <Products products={products} showQuickView={showQuickView} />
           </div>
         </div>
       </div>

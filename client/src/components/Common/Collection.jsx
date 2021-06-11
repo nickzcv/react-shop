@@ -1,6 +1,6 @@
-import collection1 from "../../assets/img/collection/collection-1.png";
-import collection2 from "../../assets/img/collection/collection-2.png";
-import {Link} from 'react-router-dom';
+import collection1 from '../../assets/img/collection/collection-1.png';
+import collection2 from '../../assets/img/collection/collection-2.png';
+import { Link } from 'react-router-dom';
 
 function Collection() {
   return (
@@ -21,7 +21,7 @@ function Collection() {
                 <p>Collection</p>
 
                 <div className="collection-btn">
-                <Link to="/shop" className="default-btn">
+                  <Link to="/shop" className="default-btn">
                     <i className="flaticon-shopping-cart"></i>
                     Shop Now
                     <span></span>

@@ -1,5 +1,4 @@
-import { PRODUCT_LIST, PRODUCT_ERROR } from "./ProductTypes";
-
+import { PRODUCT_LIST, PRODUCT_ERROR } from './ProductTypes';
 
 const initialState = {
   products: [],

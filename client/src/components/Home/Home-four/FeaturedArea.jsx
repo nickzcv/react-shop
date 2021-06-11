@@ -1,6 +1,6 @@
-import featured1 from "../../../assets/img/featured/featured-1.jpg";
-import featured2 from "../../../assets/img/featured/featured-2.jpg";
-import featured3 from "../../../assets/img/featured/featured-3.jpg";
+import featured1 from '../../../assets/img/featured/featured-1.jpg';
+import featured2 from '../../../assets/img/featured/featured-2.jpg';
+import featured3 from '../../../assets/img/featured/featured-3.jpg';
 
 function FeaturedArea() {
   return (

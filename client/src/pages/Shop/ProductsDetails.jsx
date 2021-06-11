@@ -1,8 +1,8 @@
-import NewArrivals from "../../components/Common/NewArrivals";
-import PageTitle from "../../components/Common/PageTitle";
-import Support from "../../components/Common/Support";
-import Footer from "../../components/Footer/Footer";
-import ProductsDetailsArea from "../../components/Shop/ProductsDetailsArea";
+import NewArrivals from '../../components/Common/NewArrivals';
+import PageTitle from '../../components/Common/PageTitle';
+import Support from '../../components/Common/Support';
+import Footer from '../../components/Footer/Footer';
+import ProductsDetailsArea from '../../components/Shop/ProductsDetailsArea';
 
 function ProductsDetails() {
   return (

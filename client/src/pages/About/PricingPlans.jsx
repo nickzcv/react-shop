@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import PricingArea from "../../components/About/PricingArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import Preloader from "../../components/Common/Preloader";
+import React, { useState, useEffect } from 'react';
+import PricingArea from '../../components/About/PricingArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import Preloader from '../../components/Common/Preloader';
 
 function PricingPlans() {
   const [isLoading, setisLoading] = useState(true);

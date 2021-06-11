@@ -1,6 +1,6 @@
-function MissionArea({ paddingClass = "" }) {
+function MissionArea({ paddingClass = '' }) {
   return (
-    <section className={"mission-area" + paddingClass}>
+    <section className={'mission-area' + paddingClass}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-md-6">

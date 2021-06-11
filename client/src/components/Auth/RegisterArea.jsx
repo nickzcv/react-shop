@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 function RegisterArea() {
   const name = useRef();
@@ -13,9 +13,9 @@ function RegisterArea() {
   const handleRegistration = (e) => {
     e.preventDefault();
 
-    fetch("/user/register", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    fetch('/user/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         name: name.current.value,
         username: username.current.value,
@@ -26,13 +26,13 @@ function RegisterArea() {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.message === "User created") {
-          name.current.value = "";
-          username.current.value = "";
-          email.current.value = "";
-          phone.current.value = "";
-          password.current.value = "";
-          setMessage("Account successfully created");
+        if (res.message === 'User created') {
+          name.current.value = '';
+          username.current.value = '';
+          email.current.value = '';
+          phone.current.value = '';
+          password.current.value = '';
+          setMessage('Account successfully created');
         } else if (res.errors) {
           let errors = Object.values(res.errors);
           setMessage(errors);
@@ -104,7 +104,7 @@ function RegisterArea() {
 
         <div className="form-group">
           <input
-            type={passwordShown ? "text" : "password"}
+            type={passwordShown ? 'text' : 'password'}
             className="form-control"
             placeholder="Password"
             ref={password}

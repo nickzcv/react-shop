@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import Founders from "../../components/About/Founders";
-import FunFactArea from "../../components/About/FunFactArea";
-import MissionArea from "../../components/About/MissionArea";
-import StoryArea from "../../components/About/StoryArea";
-import VisionArea from "../../components/About/VisionArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Partner from "../../components/Common/Partner";
-import SupportTwo from "../../components/Common/SupportTwo";
-import Testimonial from "../../components/Common/Testimonial";
-import Preloader from "../../components/Common/Preloader";
-import Footer from "../../components/Footer/Footer";
+import React, { useState, useEffect } from 'react';
+import Founders from '../../components/About/Founders';
+import FunFactArea from '../../components/About/FunFactArea';
+import MissionArea from '../../components/About/MissionArea';
+import StoryArea from '../../components/About/StoryArea';
+import VisionArea from '../../components/About/VisionArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Partner from '../../components/Common/Partner';
+import SupportTwo from '../../components/Common/SupportTwo';
+import Testimonial from '../../components/Common/Testimonial';
+import Preloader from '../../components/Common/Preloader';
+import Footer from '../../components/Footer/Footer';
 
 function About() {
   const [isLoading, setisLoading] = useState(true);

@@ -1,7 +1,7 @@
-import RegisterArea from "../../components/Auth/RegisterArea";
-import PageTitle from "../../components/Common/PageTitle";
-import Support from "../../components/Common/Support";
-import Footer from "../../components/Footer/Footer";
+import RegisterArea from '../../components/Auth/RegisterArea';
+import PageTitle from '../../components/Common/PageTitle';
+import Support from '../../components/Common/Support';
+import Footer from '../../components/Footer/Footer';
 
 function Register() {
   return (

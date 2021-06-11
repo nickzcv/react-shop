@@ -1,22 +1,22 @@
-import { useState, useContext } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { useState, useContext } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
-import CartContext from "../../contexts/cart-context";
-import AuthContext from "../../contexts/auth-context";
-import logo from "../../assets/img/logo.png";
-import "./MiddleHeader.scss";
+import CartContext from '../../contexts/cart-context';
+import AuthContext from '../../contexts/auth-context';
+import logo from '../../assets/img/logo.png';
+import './MiddleHeader.scss';
 
 function MiddleHeader({ history }) {
   const context = useContext(CartContext);
   const Aucontext = useContext(AuthContext);
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState('');
 
   const submitHandler = (e) => {
     e.preventDefault();
     if (keyword.trim()) {
       history.push(`/shop/${keyword}`);
     } else {
-      history.push("/");
+      history.push('/');
     }
   };
 
@@ -39,7 +39,7 @@ function MiddleHeader({ history }) {
                   <div className="col-md-4 select-column">
                     <div className="form-group">
                       <select className="form-control list">
-                        <option>All Category</option> 
+                        <option>All Category</option>
                         <option value="1">Computers</option>
                         <option value="2">Audio</option>
                         <option value="2">Home Theater</option>
@@ -78,13 +78,13 @@ function MiddleHeader({ history }) {
 
           <div className="col-lg-3">
             <ul className="middle-header-optional">
-              {Aucontext.token &&
+              {Aucontext.token && (
                 <li>
                   <Link to="/wishlist">
                     <i className="flaticon-heart"></i>
                   </Link>
-                </li> 
-              }
+                </li>
+              )}
               <li>
                 <Link to="/cart">
                   <i className="flaticon-shopping-cart"></i>

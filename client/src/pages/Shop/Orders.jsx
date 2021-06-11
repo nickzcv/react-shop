@@ -1,6 +1,6 @@
-import PageTitle from "../../components/Common/PageTitle";
-import Footer from "../../components/Footer/Footer";
-import OrderArea from "../../components/Shop/OrderArea";
+import PageTitle from '../../components/Common/PageTitle';
+import Footer from '../../components/Footer/Footer';
+import OrderArea from '../../components/Shop/OrderArea';
 
 const Orders = () => {
   return (

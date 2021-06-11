@@ -1,11 +1,11 @@
-import blog1 from "../../assets/img/blog/blog-1.jpg";
-import blog2 from "../../assets/img/blog/blog-2.jpg";
-import blog3 from "../../assets/img/blog/blog-3.jpg";
-import blog4 from "../../assets/img/blog/blog-4.jpg";
-import blog5 from "../../assets/img/blog/blog-5.jpg";
-import blog6 from "../../assets/img/blog/blog-6.jpg";
+import blog1 from '../../assets/img/blog/blog-1.jpg';
+import blog2 from '../../assets/img/blog/blog-2.jpg';
+import blog3 from '../../assets/img/blog/blog-3.jpg';
+import blog4 from '../../assets/img/blog/blog-4.jpg';
+import blog5 from '../../assets/img/blog/blog-5.jpg';
+import blog6 from '../../assets/img/blog/blog-6.jpg';
 
-function BlogArea({ containerClass = "container" }) {
+function BlogArea({ containerClass = 'container' }) {
   return (
     <section className="blog-area bg-color pt-50 pb-50">
       <div className={containerClass}>

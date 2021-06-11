@@ -1,27 +1,26 @@
-import React, { useState, useEffect, useContext } from "react";
-import { withRouter } from "react-router-dom";
-import { Image } from "cloudinary-react";
-import axios from "axios";
-import authContext from "../../contexts/auth-context";
+import React, { useState, useEffect, useContext } from 'react';
+import { withRouter } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
+import axios from 'axios';
+import authContext from '../../contexts/auth-context';
 
 function ProductsArea({ products, history, editProduct, deleteProduct }) {
-
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
-  const [type, setType] = useState("");
-  const [color, setColor] = useState("");
-  const [price, setPrice] = useState("");
-  const [inStock, setInStock] = useState("");
-  const [role, setRole] = useState("user");
+  const [type, setType] = useState('');
+  const [color, setColor] = useState('');
+  const [price, setPrice] = useState('');
+  const [inStock, setInStock] = useState('');
+  const [role, setRole] = useState('user');
   const [product, setProduct] = useState({});
   const [imagePublicId, setImagePublicId] = useState(null);
-  const [product_images, setProductImages] = useState("");
+  const [product_images, setProductImages] = useState('');
   const context = useContext(authContext);
 
   useEffect(() => {
     axios
-      .post("/user/check-role", {
+      .post('/user/check-role', {
         userId: context.userId,
       })
       .then((res) => setRole(res.data.role))
@@ -49,14 +48,11 @@ function ProductsArea({ products, history, editProduct, deleteProduct }) {
     setImagePublicId(imagePublicId);
   };
 
-
-  
-  const handleChange = async e => {
-
+  const handleChange = async (e) => {
     const image = e.target.files[0];
     const formData = new FormData();
-    formData.append("file", image);
-    formData.append("upload_preset", "econix");
+    formData.append('file', image);
+    formData.append('upload_preset', 'econix');
     const config = {
       headers: {
         'Content-Type': 'multipart/form-data',
@@ -64,7 +60,7 @@ function ProductsArea({ products, history, editProduct, deleteProduct }) {
     };
 
     const { data } = await axios.post(
-      "https://api.cloudinary.com/v1_1/dfmn9nhqt/image/upload",
+      'https://api.cloudinary.com/v1_1/dfmn9nhqt/image/upload',
       formData,
       config
     );
@@ -76,64 +72,64 @@ function ProductsArea({ products, history, editProduct, deleteProduct }) {
     <div className="products-area-wrap container">
       {true ? (
         <>
-        <div className="container">
-          <table className="order_list_table product_list_table">
-            <thead>
-              <tr className="order_table100_head">
-                <th className="order_column1">Image</th>
-                <th className="order_column1">Name</th>
-                <th className="order_column1">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {products &&
-                products.map((product, index) => {
-                  return (
-                    <tr key={product._id} className="product_tr">
-                      <td className="order_column1">
-                        <Image
-                          key={index}
-                          cloudName={process.env.REACT_APP_CLOUDINARY_NAME}
-                          publicId={product.image_public_id}
-                          width="50"
-                          crop="scale"
-                        />
-                      </td>
-                      <td
-                        onClick={() => goToDetails(product._id)}
-                        style={{ cursor: "pointer" }}
-                        className="order_column2"
-                      >
-                        {product.name}
-                      </td>
-                      <td className="order_column4">
-                        <button
-                          type="button"
-                          onClick={() =>
-                            openDeleteModal(product, product.imageId)
-                          }
-                          className="btn btn-danger"
-                          data-toggle="modal"
-                          data-target="#deleteModal"
+          <div className="container">
+            <table className="order_list_table product_list_table">
+              <thead>
+                <tr className="order_table100_head">
+                  <th className="order_column1">Image</th>
+                  <th className="order_column1">Name</th>
+                  <th className="order_column1">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {products &&
+                  products.map((product, index) => {
+                    return (
+                      <tr key={product._id} className="product_tr">
+                        <td className="order_column1">
+                          <Image
+                            key={index}
+                            cloudName={process.env.REACT_APP_CLOUDINARY_NAME}
+                            publicId={product.image_public_id}
+                            width="50"
+                            crop="scale"
+                          />
+                        </td>
+                        <td
+                          onClick={() => goToDetails(product._id)}
+                          style={{ cursor: 'pointer' }}
+                          className="order_column2"
                         >
-                          Delete
-                        </button>{" "}
-                        <button
-                          className="btn btn-primary"
-                          data-toggle="modal"
-                          data-target="#editModal"
-                          onClick={() =>
-                            openEditModal(product, product.imageId)
-                          }
-                        >
-                          Edit
-                        </button>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+                          {product.name}
+                        </td>
+                        <td className="order_column4">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              openDeleteModal(product, product.imageId)
+                            }
+                            className="btn btn-danger"
+                            data-toggle="modal"
+                            data-target="#deleteModal"
+                          >
+                            Delete
+                          </button>{' '}
+                          <button
+                            className="btn btn-primary"
+                            data-toggle="modal"
+                            data-target="#editModal"
+                            onClick={() =>
+                              openEditModal(product, product.imageId)
+                            }
+                          >
+                            Edit
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
           </div>
           <div
             className="modal fade"

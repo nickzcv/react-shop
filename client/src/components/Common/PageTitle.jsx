@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function PageTitle({ title }) {
   return (
@@ -8,7 +8,7 @@ function PageTitle({ title }) {
           <h2>{title}</h2>
           <ul>
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>{title}</li>
           </ul>

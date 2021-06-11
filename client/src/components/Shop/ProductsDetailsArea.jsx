@@ -1,8 +1,8 @@
-import React, { useContext, useState, useEffect } from "react";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import { Image } from "cloudinary-react";
-import CartContext from "../../contexts/cart-context";
+import React, { useContext, useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { Image } from 'cloudinary-react';
+import CartContext from '../../contexts/cart-context';
 
 function ProductsDetailsArea() {
   const [quantity, setQuantity] = useState(1);
@@ -12,7 +12,7 @@ function ProductsDetailsArea() {
 
   useEffect(() => {
     axios
-      .get("/products/fetch-product/" + productId)
+      .get('/products/fetch-product/' + productId)
       .then((res) => {
         setProduct(res.data.product);
       })
@@ -75,10 +75,10 @@ function ProductsDetailsArea() {
 
                 <ul className="products-info">
                   <li>
-                    <span>Availability:</span>{" "}
+                    <span>Availability:</span>{' '}
                     {product.total_in_stock > 0
                       ? `In stock (${product.total_in_stock})`
-                      : "Stock finished"}
+                      : 'Stock finished'}
                   </li>
                   <li>
                     <span>SKU:</span> <a href="#">L458-25</a>
@@ -88,12 +88,12 @@ function ProductsDetailsArea() {
                 <div className="products-color-switch">
                   <p className="available-color">
                     <span>Color</span> :
-                    <a href="#" style={{ backgroundColor: "#a53c43" }}></a>
-                    <a href="#" style={{ backgroundColor: "#192861" }}></a>
-                    <a href="#" style={{ backgroundColor: "#c58a84" }}></a>
-                    <a href="#" style={{ backgroundColor: "#ecc305" }}></a>
-                    <a href="#" style={{ backgroundColor: "#000000" }}></a>
-                    <a href="#" style={{ backgroundColor: "#808080" }}></a>
+                    <a href="#" style={{ backgroundColor: '#a53c43' }}></a>
+                    <a href="#" style={{ backgroundColor: '#192861' }}></a>
+                    <a href="#" style={{ backgroundColor: '#c58a84' }}></a>
+                    <a href="#" style={{ backgroundColor: '#ecc305' }}></a>
+                    <a href="#" style={{ backgroundColor: '#000000' }}></a>
+                    <a href="#" style={{ backgroundColor: '#808080' }}></a>
                   </p>
                 </div>
 
@@ -476,7 +476,7 @@ function ProductsDetailsArea() {
             >
               <ul className="information-list">
                 <li>
-                  Address:{" "}
+                  Address:{' '}
                   <span>4848 Hershell Hollow Road, Bothell, WA 89076</span>
                 </li>
                 <li>

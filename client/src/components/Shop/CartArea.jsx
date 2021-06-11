@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { Image } from "cloudinary-react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from 'react';
+import { Image } from 'cloudinary-react';
+import { Link } from 'react-router-dom';
 
-import CartContext from "../../contexts/cart-context";
+import CartContext from '../../contexts/cart-context';
 
 function CartArea() {
   const context = useContext(CartContext);
@@ -160,7 +160,7 @@ function CartArea() {
 
               <ul>
                 <li>
-                  Subtotal{" "}
+                  Subtotal{' '}
                   <span>
                     $
                     {(context.cartItems &&
@@ -178,7 +178,7 @@ function CartArea() {
                   Shipping <span>$30.00</span>
                 </li>
                 <li>
-                  Total{" "}
+                  Total{' '}
                   <span>
                     $
                     {((context.cartItems &&
@@ -193,7 +193,7 @@ function CartArea() {
                   </span>
                 </li>
                 <li>
-                  Payable Total{" "}
+                  Payable Total{' '}
                   <span>
                     $
                     {((context.cartItems &&

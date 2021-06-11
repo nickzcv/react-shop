@@ -1,19 +1,19 @@
-import { set } from "mongoose";
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { set } from 'mongoose';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 //actions
-import { passwordReset } from "../../redux/ResetPassword/PasswordAction";
+import { passwordReset } from '../../redux/ResetPassword/PasswordAction';
 
 const PasswordResetArea = () => {
   const dispatch = useDispatch();
   const { message } = useSelector((state) => state.PasswordReducer);
-  console.log("pass", message);
+  console.log('pass', message);
 
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    newpassword: "",
+    email: '',
+    password: '',
+    newpassword: '',
   });
 
   const onChange = (e) =>
@@ -25,11 +25,10 @@ const PasswordResetArea = () => {
     dispatch(passwordReset({ ...formData }));
 
     setFormData({
-        email: "",
-        password: "",
-        newpassword: ""
+      email: '',
+      password: '',
+      newpassword: '',
     });
-
   };
 
   return (
@@ -52,7 +51,7 @@ const PasswordResetArea = () => {
                   className="form-control"
                   placeholder="Email"
                   name="email"
-                  value = {formData.email}
+                  value={formData.email}
                   onChange={(e) => onChange(e)}
                 />
               </div>
@@ -63,7 +62,7 @@ const PasswordResetArea = () => {
                   className="form-control"
                   placeholder="Current Password"
                   name="password"
-                  value = {formData.password}
+                  value={formData.password}
                   onChange={(e) => onChange(e)}
                 />
               </div>

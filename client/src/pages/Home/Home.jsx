@@ -1,25 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect, useContext } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 //actions
-import { listProducts } from "../../redux/Product/ProductAction";
+import { listProducts } from '../../redux/Product/ProductAction';
 
 //components
-import Footer from "../../components/Footer/Footer";
-import NewArrivals from "../../components/Common/NewArrivals";
-import Support from "../../components/Common/Support";
-import BestSellers from "../../components/Common/BestSellers";
-import LatestNews from "../../components/Common/LatestNews";
-import Collection from "../../components/Common/Collection";
-import Overview from "../../components/Home/Home-one/Overview";
-import Banner from "../../components/Home/Home-one/Banner";
-import Partner from "../../components/Common/Partner";
-import SpecialOffer from "../../components/Home/Home-one/SpecialOffer";
-import SpecialProducts from "../../components/Home/Home-one/SpecialProducts";
-import QuickView from "../../components/Products/QuickView";
-import Preloader from "../../components/Common/Preloader";
-import cartContext from "../../contexts/cart-context";
-import "./Home.scss";
+import Footer from '../../components/Footer/Footer';
+import NewArrivals from '../../components/Common/NewArrivals';
+import Support from '../../components/Common/Support';
+import BestSellers from '../../components/Common/BestSellers';
+import LatestNews from '../../components/Common/LatestNews';
+import Collection from '../../components/Common/Collection';
+import Overview from '../../components/Home/Home-one/Overview';
+import Banner from '../../components/Home/Home-one/Banner';
+import Partner from '../../components/Common/Partner';
+import SpecialOffer from '../../components/Home/Home-one/SpecialOffer';
+import SpecialProducts from '../../components/Home/Home-one/SpecialProducts';
+import QuickView from '../../components/Products/QuickView';
+import Preloader from '../../components/Common/Preloader';
+import cartContext from '../../contexts/cart-context';
+import './Home.scss';
 
 function Home() {
   const [product, setProduct] = useState({});
@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
-    },1000);
+    }, 1000);
   }, []);
 
   const showQuickView = (product) => {

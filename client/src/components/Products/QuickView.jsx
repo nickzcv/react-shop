@@ -1,10 +1,10 @@
-import { useState, useEffect, useContext } from "react";
-import { Image } from "cloudinary-react";
-import { useParams } from "react-router-dom";
-import { Modal, Button, Container, Col, Row } from "react-bootstrap";
+import { useState, useEffect, useContext } from 'react';
+import { Image } from 'cloudinary-react';
+import { useParams } from 'react-router-dom';
+import { Modal, Button, Container, Col, Row } from 'react-bootstrap';
 
-import CartContext from "../../contexts/cart-context";
-import "./QuickView.scss";
+import CartContext from '../../contexts/cart-context';
+import './QuickView.scss';
 
 function QuickView({ isOpen, closeModal, product }) {
   const [quantity, setQuantity] = useState(1);
@@ -92,18 +92,17 @@ function QuickView({ isOpen, closeModal, product }) {
                 </div>
               </div>
 
-                <div className="product-add-to-cart">
-                  <button
-                    type="submit"
-                    className="default-btn"
-                    onClick={() => addToCart(product)}
-                  >
-                    <i className="flaticon-shopping-cart"></i>
-                    Add to cart
-                    <span></span>
-                  </button>
-                </div>
-              
+              <div className="product-add-to-cart">
+                <button
+                  type="submit"
+                  className="default-btn"
+                  onClick={() => addToCart(product)}
+                >
+                  <i className="flaticon-shopping-cart"></i>
+                  Add to cart
+                  <span></span>
+                </button>
+              </div>
             </Col>
           </Row>
         </Container>

@@ -1,21 +1,21 @@
-import { useState, useEffect, useContext } from "react";
-import axios from "axios";
-import BestSellers from "../../components/Common/BestSellers";
-import Collection from "../../components/Common/Collection";
-import SpecialOffer from "../../components/Common/SpecialOffer";
-import NewArrivals from "../../components/Common/NewArrivals";
-import SpecialProducts from "../../components/Common/SpecialProducts";
-import Testimonial from "../../components/Common/Testimonial";
-import LatestNews from "../../components/Common/LatestNews";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import SupportTwo from "../../components/Common/SupportTwo";
-import Banner from "../../components/Home/Home-four/Banner";
-import FeaturedArea from "../../components/Home/Home-four/FeaturedArea";
-import QuickView from "../../components/Products/QuickView";
-import Preloader from "../../components/Common/Preloader";
+import { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
+import BestSellers from '../../components/Common/BestSellers';
+import Collection from '../../components/Common/Collection';
+import SpecialOffer from '../../components/Common/SpecialOffer';
+import NewArrivals from '../../components/Common/NewArrivals';
+import SpecialProducts from '../../components/Common/SpecialProducts';
+import Testimonial from '../../components/Common/Testimonial';
+import LatestNews from '../../components/Common/LatestNews';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import SupportTwo from '../../components/Common/SupportTwo';
+import Banner from '../../components/Home/Home-four/Banner';
+import FeaturedArea from '../../components/Home/Home-four/FeaturedArea';
+import QuickView from '../../components/Products/QuickView';
+import Preloader from '../../components/Common/Preloader';
 
-import cartContext from "../../contexts/cart-context";
+import cartContext from '../../contexts/cart-context';
 
 function HomeFour() {
   const [products, setProducts] = useState([]);
@@ -27,7 +27,7 @@ function HomeFour() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })

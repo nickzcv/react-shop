@@ -1,6 +1,6 @@
-import quickView1 from "../../assets/img/quick-view/quick-view-1.jpg";
-import quickView2 from "../../assets/img/quick-view/quick-view-2.jpg";
-import quickView3 from "../../assets/img/quick-view/quick-view-3.jpg";
+import quickView1 from '../../assets/img/quick-view/quick-view-1.jpg';
+import quickView2 from '../../assets/img/quick-view/quick-view-2.jpg';
+import quickView3 from '../../assets/img/quick-view/quick-view-3.jpg';
 
 function ProductsDetailsSidebarArea() {
   return (
@@ -73,27 +73,27 @@ function ProductsDetailsSidebarArea() {
                           <span>Color</span> :
                           <a
                             href="#"
-                            style={{ backgroundColor: "#a53c43" }}
+                            style={{ backgroundColor: '#a53c43' }}
                           ></a>
                           <a
                             href="#"
-                            style={{ backgroundColor: "#192861" }}
+                            style={{ backgroundColor: '#192861' }}
                           ></a>
                           <a
                             href="#"
-                            style={{ backgroundColor: "#c58a84" }}
+                            style={{ backgroundColor: '#c58a84' }}
                           ></a>
                           <a
                             href="#"
-                            style={{ backgroundColor: "#ecc305" }}
+                            style={{ backgroundColor: '#ecc305' }}
                           ></a>
                           <a
                             href="#"
-                            style={{ backgroundColor: "#000000" }}
+                            style={{ backgroundColor: '#000000' }}
                           ></a>
                           <a
                             href="#"
-                            style={{ backgroundColor: "#808080" }}
+                            style={{ backgroundColor: '#808080' }}
                           ></a>
                         </p>
                       </div>
@@ -335,7 +335,7 @@ function ProductsDetailsSidebarArea() {
                           </div>
                           <h3>Good</h3>
                           <span>
-                            <strong>Admin</strong> on{" "}
+                            <strong>Admin</strong> on{' '}
                             <strong>Sep 21, 2019</strong>
                           </span>
                           <p>
@@ -356,7 +356,7 @@ function ProductsDetailsSidebarArea() {
                           </div>
                           <h3>Good</h3>
                           <span>
-                            <strong>Admin</strong> on{" "}
+                            <strong>Admin</strong> on{' '}
                             <strong>Sep 21, 2019</strong>
                           </span>
                           <p>
@@ -377,7 +377,7 @@ function ProductsDetailsSidebarArea() {
                           </div>
                           <h3>Good</h3>
                           <span>
-                            <strong>Admin</strong> on{" "}
+                            <strong>Admin</strong> on{' '}
                             <strong>Sep 21, 2019</strong>
                           </span>
                           <p>
@@ -462,7 +462,7 @@ function ProductsDetailsSidebarArea() {
                   >
                     <ul className="information-list">
                       <li>
-                        Address:{" "}
+                        Address:{' '}
                         <span>
                           4848 Hershell Hollow Road, Bothell, WA 89076
                         </span>
@@ -471,7 +471,7 @@ function ProductsDetailsSidebarArea() {
                         Phone: <a href="tel:+15143214567">+1 (514) 321-4567</a>
                       </li>
                       <li>
-                        Email:{" "}
+                        Email:{' '}
                         <a href="mailto:hello@ejon.com">hello@ejon.com</a>
                       </li>
                     </ul>

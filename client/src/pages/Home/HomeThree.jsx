@@ -1,22 +1,22 @@
-import { useState, useEffect, useContext } from "react";
-import axios from "axios";
-import Support from "../../components/Common/Support";
-import NewArrivals from "../../components/Common/NewArrivals";
-import Collection from "../../components/Common/Collection";
-import BestSellers from "../../components/Common/BestSellers";
-import SpecialProducts from "../../components/Common/SpecialProducts";
-import Testimonial from "../../components/Common/Testimonial";
-import LatestNews from "../../components/Common/LatestNews";
-import Partner from "../../components/Common/Partner";
-import Footer from "../../components/Footer/Footer";
-import Banner from "../../components/Home/Home-three/Banner";
-import OfferProductsArea from "../../components/Home/Home-three/OfferProductsArea";
-import HotProductsArea from "../../components/Home/Home-three/HotProductsArea";
-import FeaturedArea from "../../components/Home/Home-three/FeaturedArea";
-import QuickView from "../../components/Products/QuickView";
-import Preloader from "../../components/Common/Preloader";
+import { useState, useEffect, useContext } from 'react';
+import axios from 'axios';
+import Support from '../../components/Common/Support';
+import NewArrivals from '../../components/Common/NewArrivals';
+import Collection from '../../components/Common/Collection';
+import BestSellers from '../../components/Common/BestSellers';
+import SpecialProducts from '../../components/Common/SpecialProducts';
+import Testimonial from '../../components/Common/Testimonial';
+import LatestNews from '../../components/Common/LatestNews';
+import Partner from '../../components/Common/Partner';
+import Footer from '../../components/Footer/Footer';
+import Banner from '../../components/Home/Home-three/Banner';
+import OfferProductsArea from '../../components/Home/Home-three/OfferProductsArea';
+import HotProductsArea from '../../components/Home/Home-three/HotProductsArea';
+import FeaturedArea from '../../components/Home/Home-three/FeaturedArea';
+import QuickView from '../../components/Products/QuickView';
+import Preloader from '../../components/Common/Preloader';
 
-import cartContext from "../../contexts/cart-context";
+import cartContext from '../../contexts/cart-context';
 
 function HomeThree() {
   const [products, setProducts] = useState([]);
@@ -28,7 +28,7 @@ function HomeThree() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })

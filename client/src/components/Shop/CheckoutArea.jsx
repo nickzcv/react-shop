@@ -1,43 +1,38 @@
-import React, { useContext, useState } from "react";
-import CartContext from "../../contexts/cart-context";
-import AuthContext from "../../contexts/auth-context";
-import axios from "axios";
+import React, { useContext, useState } from 'react';
+import CartContext from '../../contexts/cart-context';
+import AuthContext from '../../contexts/auth-context';
+import axios from 'axios';
 
 function CheckoutArea() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [companyName, setCompanyName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [country, setCountry] = useState("");
-  const [address, setAddress] = useState("");
-  const [city, setCity] = useState("");
-  const [postCode, setPostCode] = useState("");
-  const [orderNotes, setOrderNotes] = useState("");
-  const [message, setMessage] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [companyName, setCompanyName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [country, setCountry] = useState('');
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+  const [postCode, setPostCode] = useState('');
+  const [orderNotes, setOrderNotes] = useState('');
+  const [message, setMessage] = useState('');
 
   const context = useContext(CartContext);
   const authContext = useContext(AuthContext);
 
-   context.cartItems.itemsPrice =  context.cartItems &&
+  context.cartItems.itemsPrice =
+    context.cartItems &&
     context.cartItems.reduce((count, curItem) => {
-      return (
-        count +
-        parseInt(curItem.price) *
-          parseInt(curItem.quantity || 0)
-      );
-    }, 0)
-
-
+      return count + parseInt(curItem.price) * parseInt(curItem.quantity || 0);
+    }, 0);
 
   const submitOrder = (e) => {
     e.preventDefault();
     if (!authContext.userId && !authContext.token) {
-      setMessage("You need to login first");
+      setMessage('You need to login first');
       return;
     }
     axios
-      .post("/order/add-order-info", {
+      .post('/order/add-order-info', {
         userId: authContext.userId,
         firstName,
         lastName,
@@ -49,21 +44,21 @@ function CheckoutArea() {
         city,
         postCode,
         orderNotes,
-        totalPrice:   context.cartItems.itemsPrice
+        totalPrice: context.cartItems.itemsPrice,
       })
       .then((res) => {
-        if (res?.data?.message === "Order successfully added") {
-          localStorage.removeItem("cart-items");
-          setFirstName("");
-          setLastName("");
-          setCompanyName("");
-          setEmail("");
-          setPhone("");
-          setCountry("");
-          setAddress("");
-          setCity("");
-          setPostCode("");
-          setOrderNotes("");
+        if (res?.data?.message === 'Order successfully added') {
+          localStorage.removeItem('cart-items');
+          setFirstName('');
+          setLastName('');
+          setCompanyName('');
+          setEmail('');
+          setPhone('');
+          setCountry('');
+          setAddress('');
+          setCity('');
+          setPostCode('');
+          setOrderNotes('');
           setMessage(res.data.message);
         }
       })
@@ -73,11 +68,11 @@ function CheckoutArea() {
   return (
     <section className="checkout-area ptb-50">
       <div className="container">
-        {message !== "" && (
+        {message !== '' && (
           <div
             className={`
         ${
-          message === "Order successfully added"
+          message === 'Order successfully added'
         } ? alert alert-success : alert alert-danger 
       `}
             role="alert"
@@ -297,7 +292,7 @@ function CheckoutArea() {
 
                   <ul>
                     <li>
-                      Subtotal{" "}
+                      Subtotal{' '}
                       <span>
                         $
                         {context.cartItems &&
@@ -314,7 +309,7 @@ function CheckoutArea() {
                       Shipping <span>$30.00</span>
                     </li>
                     <li>
-                      Total{" "}
+                      Total{' '}
                       <span>
                         $
                         {context.cartItems &&
@@ -328,7 +323,7 @@ function CheckoutArea() {
                       </span>
                     </li>
                     <li>
-                      Payable Total{" "}
+                      Payable Total{' '}
                       <span>
                         $
                         {context.cartItems &&
@@ -373,7 +368,7 @@ function CheckoutArea() {
                   <button
                     type="submit"
                     className="default-btn"
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: 'pointer' }}
                   >
                     Place Order
                   </button>

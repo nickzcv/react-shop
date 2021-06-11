@@ -1,5 +1,5 @@
-import featured4 from "../../../assets/img/featured/featured-4.jpg";
-import featured5 from "../../../assets/img/featured/featured-5.jpg";
+import featured4 from '../../../assets/img/featured/featured-4.jpg';
+import featured5 from '../../../assets/img/featured/featured-5.jpg';
 
 function FeaturedArea() {
   return (

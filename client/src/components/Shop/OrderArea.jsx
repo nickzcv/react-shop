@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { listOrders } from "../../redux/Order/OrderAction";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { listOrders } from '../../redux/Order/OrderAction';
 
 const OrderArea = () => {
   const dispatch = useDispatch();
@@ -40,26 +40,28 @@ const OrderArea = () => {
                   <td className="order_column2">{order.user_first_name}</td>
                   <td className="order_column4">${order.totalPrice}</td>
                   <td className="order_column5">
-                    {order.isPaid === false ? "Not Paid" : "Paid"}
+                    {order.isPaid === false ? 'Not Paid' : 'Paid'}
                   </td>
                   <td className="order_column6">
                     {order.isDelivered === false
-                      ? "Not Delivered"
-                      : "Delivered"}
+                      ? 'Not Delivered'
+                      : 'Delivered'}
                   </td>
                   <td>
                     <button
                       onClick={() => deliverHandler(order._id, i)}
                       className={
                         order.isDelivered === false
-                          ? "order-pending"
-                          : "order-button"
+                          ? 'order-pending'
+                          : 'order-button'
                       }
                       type="button"
                     >
-                      <span className="order-confirm">{order.isDelivered === false
-                        ? "confirm delivery"
-                        : "confirmed"} </span>
+                      <span className="order-confirm">
+                        {order.isDelivered === false
+                          ? 'confirm delivery'
+                          : 'confirmed'}{' '}
+                      </span>
                     </button>
                   </td>
                 </tr>

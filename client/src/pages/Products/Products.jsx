@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
-import AuthContext from "../../contexts/auth-context";
-import PageTitle from "../../components/Common/PageTitle";
-import ProductsArea from "../../components/Products/ProductsArea";
-import axios from "axios";
-import Footer from "../../components/Footer/Footer";
+import React, { useContext, useEffect, useState } from 'react';
+import AuthContext from '../../contexts/auth-context';
+import PageTitle from '../../components/Common/PageTitle';
+import ProductsArea from '../../components/Products/ProductsArea';
+import axios from 'axios';
+import Footer from '../../components/Footer/Footer';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -11,7 +11,7 @@ function Products() {
 
   useEffect(() => {
     axios
-      .get("/products/")
+      .get('/products/')
       .then((res) => {
         setProducts(res.data.products);
       })
@@ -31,26 +31,26 @@ function Products() {
     prod_image_public_id
   ) => {
     const formData = new FormData();
-    formData.append("product_id", prod_id);
-    formData.append("product_name", prod_name);
-    formData.append("product_description", prod_description);
+    formData.append('product_id', prod_id);
+    formData.append('product_name', prod_name);
+    formData.append('product_description', prod_description);
 
-    formData.append("product_type", prod_type);
-    formData.append("product_color", prod_color);
-    formData.append("product_price", prod_price);
-    formData.append("total_in_stock", prod_instock);
-    formData.append("image_public_id", prod_image);
-    formData.append("upload_preset", "econix");
+    formData.append('product_type', prod_type);
+    formData.append('product_color', prod_color);
+    formData.append('product_price', prod_price);
+    formData.append('total_in_stock', prod_instock);
+    formData.append('image_public_id', prod_image);
+    formData.append('upload_preset', 'econix');
 
     axios
-      .post("/products/edit-product", formData, {
+      .post('/products/edit-product', formData, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          'Content-Type': 'multipart/form-data',
         },
       })
       .then((res) => {
-        if (res.data.message === "Product edited") {
-          return axios.get("/products/").then((res) => {
+        if (res.data.message === 'Product edited') {
+          return axios.get('/products/').then((res) => {
             setProducts(res.data.products);
           });
         }
@@ -64,7 +64,7 @@ function Products() {
         productId: id,
       })
       .then((res) => {
-        if (res.data.message === "Successfully Deleted") {
+        if (res.data.message === 'Successfully Deleted') {
           setProducts(res.data.products);
         }
       })

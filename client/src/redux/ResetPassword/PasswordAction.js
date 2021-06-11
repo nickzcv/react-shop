@@ -1,15 +1,14 @@
-import axios from "axios";
-import { PASSWORD_RESET_SUCCESS, PASSWORD_ERROR } from "./PasswordTypes";
+import axios from 'axios';
+import { PASSWORD_RESET_SUCCESS, PASSWORD_ERROR } from './PasswordTypes';
 
 export const passwordReset = (user) => async (dispatch) => {
   try {
     const config = {
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     };
 
-    
     const { data } = await axios.put(`user/passwordreset`, user, config);
 
     dispatch({

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { Image } from "cloudinary-react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Image } from 'cloudinary-react';
+import { Link } from 'react-router-dom';
 
 function NewArrivals({
-  paddingClass = "",
-  title = "New Arrivals",
+  paddingClass = '',
+  title = 'New Arrivals',
   products = [],
   showQuickView,
   addToCart,
 }) {
   return (
-    <section className={"arrivals-products-area " + paddingClass}>
+    <section className={'arrivals-products-area ' + paddingClass}>
       <div className="container">
         <div className="section-title">
           <h2>{title}</h2>

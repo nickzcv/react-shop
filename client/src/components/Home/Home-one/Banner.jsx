@@ -1,12 +1,12 @@
-import React from "react";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import {Link} from 'react-router-dom';
+import React from 'react';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { Link } from 'react-router-dom';
 
-import headphone from "../../../assets/img/main-slider/headphone.png";
-import monitor from "../../../assets/img/main-slider/monitor.png";
-import drone from "../../../assets/img/main-slider/drone.png";
+import headphone from '../../../assets/img/main-slider/headphone.png';
+import monitor from '../../../assets/img/main-slider/monitor.png';
+import drone from '../../../assets/img/main-slider/drone.png';
 
 const Banner = () => {
   return (
@@ -37,7 +37,7 @@ const Banner = () => {
                     </p>
 
                     <div className="slider-btn">
-                    <Link to="/shop" className="default-btn">
+                      <Link to="/shop" className="default-btn">
                         <i className="flaticon-shopping-cart"></i>
                         Shop Now
                         <span></span>
@@ -72,7 +72,7 @@ const Banner = () => {
                     </p>
 
                     <div className="slider-btn">
-                    <Link to="/shop" className="default-btn">
+                      <Link to="/shop" className="default-btn">
                         <i className="flaticon-shopping-cart"></i>
                         Shop Now
                         <span></span>
@@ -107,7 +107,7 @@ const Banner = () => {
                     </p>
 
                     <div className="slider-btn">
-                    <Link to="/shop" className="default-btn">
+                      <Link to="/shop" className="default-btn">
                         <i className="flaticon-shopping-cart"></i>
                         Shop Now
                         <span></span>

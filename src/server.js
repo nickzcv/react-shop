@@ -44,7 +44,7 @@ production && (
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   })
 )
-
+// Start point
 app.listen(process.env.PORT || port, function() {
     console.log('Site started!');
 });
