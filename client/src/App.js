@@ -107,7 +107,6 @@ function App() {
         >
           <div className="app">
             <Toaster />
-            <MiddleHeader />
             <Navbar />
             <Switch>
               <Route path="/" exact component={Home} />
