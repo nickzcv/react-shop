@@ -1,5 +1,4 @@
 const Product = require('../models/Product');
-const { cloudinary } = require('../utils/cloudinary');
 
 exports.fetchProducts = async (req, res) => {
   try {
