@@ -1,11 +1,10 @@
 const bcrypt = require('bcryptjs');
-
 const User = require('../models/User');
 const genAccTkn = require('../helpers/genAccessToken');
 const {
   validateRegisterInput,
   validateLoginInput,
-} = require("../utils/validators");
+} = require('../utils/validators');
 
 exports.postLogin = async (req, res) => {
   try {
@@ -78,7 +77,7 @@ exports.postRegister = async (req, res) => {
 
     if (existingUser) {
       return res.status(401).json({
-        error: "Sorry email already registered",
+        error: 'Sorry email already registered',
       });
     }
 
@@ -89,7 +88,7 @@ exports.postRegister = async (req, res) => {
       username,
       email,
       phone,
-      role: "user",
+      role: 'user',
       password: hashedPassword,
       orders: [],
     });
