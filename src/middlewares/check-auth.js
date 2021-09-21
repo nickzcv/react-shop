@@ -1,17 +1,17 @@
 const jwt = require('jsonwebtoken');
 
-module.exports = (req, res, next) => {
+module.exports = (request, response, next) => {
   try {
-    console.log(req)
-    const token = req.headers.authorization.split(" ")[1];
+    console.log('request', request)
+    const token = request.headers.authorization.split(' ')[1];
     const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
     console.log(token)
-    req.userData = decoded;
-    req.userId = decoded.userId;
+    request.userData = decoded;
+    request.userId = decoded.userId;
     next();
   } catch (err) {
-    return res.status(401).json({
-      message: "Auth Failed",
+    return response.status(401).json({
+      message: 'Auth Failed',
     });
   }
 };
