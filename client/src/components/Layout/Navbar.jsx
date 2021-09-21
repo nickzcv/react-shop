@@ -100,7 +100,7 @@ function Navbar() {
       <div className={showMenu ? 'main-navbar show' : 'main-navbar'}>
         <div className="container">
           <nav className="navbar navbar-expand-md navbar-light">
-            <div className={'navbar-category'}>
+            <div className="navbar-category">
               <div className="collapse navbar-collapse">
                 <ul className="navbar-nav">
                   <li className="nav-item respo-nav">
@@ -237,6 +237,13 @@ function Navbar() {
                         <div className="row">
                           <div className="col">
                             <ul className="megamenu-submenu">
+                              
+                              <li>
+                                <NavLink to={'/shop/camera'} className="nav-link">
+                                  <i className="flaticon-camera"></i>
+                                  Cameras
+                                </NavLink>
+                              </li>
                               <li>
                                 <NavLink to={'/about'} className="nav-link">
                                   About Us
@@ -474,94 +481,6 @@ function Navbar() {
                   </NavLink>
                 </li>
 
-                {context.token && (
-                  <>
-                    {/* <li className="nav-item">
-                      <NavLink
-                        to="/products"
-                        isActive={() => productsRoutes.includes(pathname)}
-                        className="nav-link"
-                      >
-                        Products <i className="bx bx-chevron-down chevron-display"></i>
-                        <span className="plus_icon">+</span>
-                      </NavLink>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <NavLink to="/products" className="nav-link">
-                            Products
-                          </NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink to="/add-product" className="nav-link">
-                            Add Product
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </li> */}
-                    <li className="nav-item">
-                      <NavLink
-                        to="/profile"
-                        // isActive={() => shopRoutes.includes(pathname)}
-                        className="nav-link"
-                      >
-                        {user && <i class="bx bxs-user"></i>}{' '}
-                        <i className="bx bx-chevron-down chevron-display"></i>
-                        <span className="plus_icon">+</span>
-                      </NavLink>
-                      <ul className="dropdown-menu">
-                        <li className="nav-item">
-                          <NavLink to="/profile" className="nav-link">
-                            {user && user.name}
-                          </NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink to="/products" className="nav-link">
-                            Products
-                          </NavLink>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink to="/add-product" className="nav-link">
-                            Add Product
-                          </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                          <NavLink to="/cart" className="nav-link">
-                            Cart
-                          </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                          <NavLink to="/order" className="nav-link">
-                            Order
-                          </NavLink>
-                        </li>
-
-                        <li className="nav-item">
-                          <NavLink to="/wishlist" className="nav-link">
-                            Wishlist
-                          </NavLink>
-                        </li>
-
-                        <hr />
-
-                        <li className="nav-item">
-                          <button
-                            onClick={handleLogout}
-                            className="nav-logout-btn"
-                          >
-                            Logout
-                          </button>
-                        </li>
-                        <li className="nav-item">
-                          <NavLink to="/reset" className="nav-link">
-                            Reset password
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </li>
-                  </>
-                )}
               </ul>
 
               <div className="others-option d-flex align-items-center">

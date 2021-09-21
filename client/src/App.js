@@ -49,44 +49,16 @@ import CartContext from './contexts/cart-context';
 import MiddleHeader from './components/Layout/MiddleHeader';
 import ShopArea from './components/Shop/ShopArea';
 import Navbar from './components/Layout/Navbar';
-import TopHeader from './components/Layout/TopHeader';
 
 function App() {
-  const [token, setToken] = useState(null);
-  const [userId, setUserId] = useState('');
-  const [tokenExpiration, setTokenExpiration] = useState('');
   const [cartItems, setCartItems] = useState([]);
-  const [test, setTest] = useState(null);
 
   useEffect(() => {
-    const _token = JSON.parse(localStorage.getItem('token'));
-    const tokenExp = JSON.parse(localStorage.getItem('tokenExpiration'));
-    const userIdLocal = JSON.parse(localStorage.getItem('userId'));
-    if (_token && userIdLocal && tokenExp) {
-      setToken(_token);
-      setUserId(userIdLocal);
-      setTokenExpiration(tokenExp);
-    }
     const _cartItems = JSON.parse(localStorage.getItem('cart-items'));
     if (_cartItems && _cartItems.length > 0) {
       setCartItems(_cartItems);
     }
-  }, [test]);
-
-  const login = (token, userId, tokenExpiratopn) => {
-    setToken(token);
-    setUserId(userId);
-    setTokenExpiration(tokenExpiratopn);
-  };
-
-  const logout = () => {
-    setToken(null);
-    setUserId(null);
-    setTokenExpiration(null);
-    localStorage.removeItem('token');
-    localStorage.removeItem('userId');
-    localStorage.removeItem('tokenExpiration');
-  };
+  }, []);
 
   const addItemToCart = (product) => {
     let exist = false;
@@ -121,21 +93,11 @@ function App() {
     _cartItems.splice(index, 1);
     localStorage.setItem('cart-items', JSON.stringify(_cartItems));
     setCartItems(_cartItems);
-
-    setTest(id);
   };
 
   return (
     <Router>
-      <AuthContext.Provider
-        value={{
-          token,
-          userId,
-          tokenExpiration,
-          login,
-          logout,
-        }}
-      >
+
         <CartContext.Provider
           value={{
             cartItems,
@@ -145,7 +107,6 @@ function App() {
         >
           <div className="app">
             <Toaster />
-            <TopHeader shippingMessage="Free shipping on all orders over $50" />
             <MiddleHeader />
             <Navbar />
             <Switch>
@@ -159,9 +120,6 @@ function App() {
               <Route path="/search" component={Search} />
               <Route path="/contact" component={Contact} />
               <Route path="/faqs" component={Faqs} />
-              {!token && <Route path="/login" component={Login} />}
-              {!token && <Route path="/register" component={Register} />}
-
               <Route path="/my-account" component={MyAccount} />
               <Route path="/error-404" component={Error404} />
               <Route path="/tracking-order" component={TrackingOrder} />
@@ -199,14 +157,14 @@ function App() {
               <Route path="/blog-full-width" component={BlogFullWidth} />
               <Route path="/blog-details" component={BlogDetails} />
               <Route path="/coming-soon" component={ComingSoon} />
-              {token && <Route path="/add-product" component={AddProduct} />}
-              {token && <Route path="/profile" component={User} />}
-              {token && <Route path="/products" component={Products} />}
-              {token && <Route path="/reset" component={ResetPassword} />}
+              <Route path="/add-product" component={AddProduct} />
+              <Route path="/profile" component={User} />
+              <Route path="/products" component={Products} />
+              <Route path="/reset" component={ResetPassword} />
             </Switch>
           </div>
         </CartContext.Provider>
-      </AuthContext.Provider>
+
     </Router>
   );
 }
