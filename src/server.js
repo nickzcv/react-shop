@@ -33,7 +33,7 @@ app.use(
 // When you upload a file, the file will be accessible from req.files
 app.use(fileUpload({}));
 // Database connection
-db.connectDb();
+db.connectDb().catch(error => console.log(error));
 // Routes
 app.use('/products', productRoutes);
 app.use('/user', userRoutes);

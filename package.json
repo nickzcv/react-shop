@@ -1,5 +1,5 @@
 {
-  "name": "NickShop",
+  "name": "RomaDoma",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -24,7 +24,7 @@
     "express-fileupload": "^1.2.0",
     "express-validator": "^6.10.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.11",
+    "mongoose": "^6.0.7",
     "react-accessible-accordion": "^3.3.4",
     "react-bootstrap": "^1.4.3",
     "react-countup": "^4.3.3",
