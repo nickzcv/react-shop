@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
-    }, 1000);
+    }, 2000);
   }, []);
 
   const showQuickView = (product) => {

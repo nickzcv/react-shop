@@ -5,7 +5,7 @@ body {
   margin: 0;
   font-family: lato, sans-serif;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: transparent;
 }
 a {
   text-decoration: none;
@@ -2059,19 +2059,19 @@ h6:last-child {
     linear,
     left top,
     left bottom,
-    from(#99b9da),
-    color-stop(#aac4e0),
-    color-stop(#bbcfe6),
+    from(#ffffff),
     color-stop(#ccdbec),
-    to(#dce6f2)
+    color-stop(#bbcfe6),
+    color-stop(#aac4e0),
+    to(#99b9da)
   );
   background: linear-gradient(
     to bottom,
-    #99b9da,
-    #aac4e0,
-    #bbcfe6,
+    #ffffff,
     #ccdbec,
-    #dce6f2
+    #bbcfe6,
+    #aac4e0,
+    #99b9da
   );
   height: 730px;
 }

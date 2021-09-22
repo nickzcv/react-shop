@@ -17,7 +17,7 @@ function About() {
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
-    }, 1000);
+    }, 10000);
   }, []);
 
   return (

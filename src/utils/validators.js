@@ -51,10 +51,19 @@ module.exports.validateLoginInput = (email, password) => {
   };
 };
 
-module.exports.validateOrder = (firstName, lastName, email, phone, country, address, city, postCode) => {
+module.exports.validateOrder = (
+  firstName,
+  lastName,
+  email,
+  phone,
+  country,
+  address,
+  city,
+  postCode
+) => {
   const errors = {};
 
-  console.log(firstName)
+  console.log(firstName);
 
   if (firstName.trim() === "") {
     errors.firstName = "Firstname must not be empty";
@@ -90,4 +99,4 @@ module.exports.validateOrder = (firstName, lastName, email, phone, country, addr
     errors,
     valid: Object.keys(errors).length < 1,
   };
-}
+};

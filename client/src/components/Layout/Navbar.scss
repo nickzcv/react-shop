@@ -1,3 +1,11 @@
 .logo {
   width: 150px;
+  padding: 5px 0;
+}
+
+.sticky-active {
+  .logo {
+    width: 120px;
+    padding: 0;
+  }
 }

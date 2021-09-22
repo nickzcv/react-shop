@@ -1,32 +1,31 @@
-const Product = require('../models/Product');
+const Product = require("../models/Product");
 
 exports.fetchProducts = async (req, res) => {
   try {
-    const pageSize = 12
-    const page = Number(req.query.pageNumber) || 1
-  
+    const pageSize = 12;
+    const page = Number(req.query.pageNumber) || 1;
+
     const keyword = req.query.keyword
       ? {
           name: {
             $regex: req.query.keyword,
-            $options: 'i',
+            $options: "i",
           },
         }
-      : {}
-  
+      : {};
+
     const count = await Product.countDocuments({ ...keyword });
     const products = await Product.find({ ...keyword })
       .limit(pageSize)
-      .skip(pageSize * (page - 1))
-  
-    res.json({ products, page, pages: Math.ceil(count / pageSize) })
+      .skip(pageSize * (page - 1));
+
+    res.json({ products, page, pages: Math.ceil(count / pageSize) });
   } catch (err) {
     res.status(500);
   }
 };
 
 exports.addProduct = async (req, res) => {
-
   try {
     const name = req.body.product_name;
     const description = req.body.product_description;
@@ -86,9 +85,7 @@ exports.deleteProduct = async (req, res) => {
   }
 };
 
-
 exports.editProduct = async (req, res) => {
- 
   try {
     const prodId = req.body.product_id;
     const name = req.body.product_name;
@@ -109,15 +106,14 @@ exports.editProduct = async (req, res) => {
           price,
           color,
           total_in_stock,
-          image_public_id
+          image_public_id,
         },
       }
     );
     res.status(200).json({
       message: "Product edited",
-    })
-
-  } catch(err) {
+    });
+  } catch (err) {
     res.status(500);
   }
-}
+};

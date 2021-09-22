@@ -87,14 +87,8 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, [visible, handleScroll]);
-
-  const handleLogout = () => {
-    context.logout();
-    history.push('/login');
-  };
 
   return (
     <div className={`navbar-area ${visible ? 'is-sticky sticky-active' : ''}`}>
@@ -103,7 +97,7 @@ function Navbar() {
           <nav className="navbar navbar-expand-md navbar-light">
 
             <div className="logo">
-              <img src={logo} alt="image" />
+              <Link to={'/'}><img src={logo} alt="image" /></Link>
             </div>
             <ul className="navbar-nav responsive-menu">
               <li className="nav-item">

@@ -2,7 +2,6 @@ const Order = require("../models/Order");
 const { validateOrder } = require("../utils/validators");
 
 exports.addOrderInfo = async (req, res) => {
-
   try {
     const {
       userId,
@@ -16,7 +15,7 @@ exports.addOrderInfo = async (req, res) => {
       city,
       postCode,
       orderNotes,
-      totalPrice
+      totalPrice,
     } = req.body;
 
     const { valid, errors } = validateOrder(
@@ -48,7 +47,7 @@ exports.addOrderInfo = async (req, res) => {
       user_city: city,
       user_postcode: postCode,
       user_order_notes: orderNotes,
-      totalPrice
+      totalPrice,
     });
     await order.save();
     res.status(200).json({
@@ -59,28 +58,26 @@ exports.addOrderInfo = async (req, res) => {
   }
 };
 
-exports.fetchOrders = async (req,res) => {
+exports.fetchOrders = async (req, res) => {
   try {
-    const orders = await Order.find({}).populate('user', 'id name');
+    const orders = await Order.find({}).populate("user", "id name");
     res.json(orders);
   } catch (err) {
     res.status(500);
   }
 };
 
-
 exports.updateOrderToDelivered = async (req, res) => {
-
-  const order = await Order.findById(req.params.id)
+  const order = await Order.findById(req.params.id);
 
   if (order) {
-    order.isDelivered = true
+    order.isDelivered = true;
 
-    const updatedOrder = await order.save()
+    const updatedOrder = await order.save();
 
-    res.json(updatedOrder)
+    res.json(updatedOrder);
   } else {
-    res.status(404)
-    throw new Error('Order not found')
+    res.status(404);
+    throw new Error("Order not found");
   }
-}
+};
