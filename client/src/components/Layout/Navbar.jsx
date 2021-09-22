@@ -45,27 +45,12 @@ const blogRoutes = [
 const productsRoutes = ['/products', '/add-product'];
 
 function Navbar() {
-  const [user, setUser] = useState({});
   const [visible, setVisible] = useState(false);
   const { pathname } = useLocation();
-  const context = useContext(AuthContext);
   const cartContext = useContext(CartContext);
   const history = useHistory();
   const [active, setActive] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-
-  useEffect(() => {
-    if (context && context.userId) {
-      axios
-        .get(`/user/${context.userId}`)
-        .then((res) => {
-          setUser(res.data.user);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  }, [context]);
 
   const toggleHotline = () => {
     setActive(!active);
@@ -100,41 +85,7 @@ function Navbar() {
               <Link to={'/'}><img src={logo} alt="image" /></Link>
             </div>
             <ul className="navbar-nav responsive-menu">
-              <li className="nav-item">
-                <NavLink
-                    to={'/'}
-                    isActive={() => homeRoutes.includes(pathname)}
-                    className="nav-link"
-                >
-                  Home <i className="bx bx-chevron-down chevron-display"></i>
-                  <span className="plus_icon">+</span>
-                </NavLink>
-                <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <NavLink to={'/'} className="nav-link">
-                      Home
-                    </NavLink>
-                  </li>
 
-                  <li className="nav-item">
-                    <NavLink to={'/home-two'} className="nav-link">
-                      Home Two
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to={'/home-three'} className="nav-link">
-                      Home Three
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to={'/home-four'} className="nav-link">
-                      Home Four
-                    </NavLink>
-                  </li>
-                </ul>
-              </li>
 
               <li className="nav-item megamenu">
                 <NavLink
@@ -142,7 +93,7 @@ function Navbar() {
                     isActive={() => pagesRoutes.includes(pathname)}
                     className="nav-link"
                 >
-                  Pages <i className="bx bx-chevron-down chevron-display"></i>
+                  Игрушки по категориям <i className="bx bx-chevron-down chevron-display"></i>
                   <span className="plus_icon">+</span>
                 </NavLink>
                 <ul className="dropdown-menu">
@@ -200,24 +151,6 @@ function Navbar() {
                                 FAQ's
                               </NavLink>
                             </li>
-                            {!context.token && (
-                                <div>
-                                  <li>
-                                    <NavLink to="/login" className="nav-link">
-                                      Login
-                                    </NavLink>
-                                  </li>
-
-                                  <li>
-                                    <NavLink
-                                        to="/register"
-                                        className="nav-link"
-                                    >
-                                      Register
-                                    </NavLink>
-                                  </li>
-                                </div>
-                            )}
 
                             <li>
                               <NavLink to="/my-account" className="nav-link">
@@ -282,63 +215,9 @@ function Navbar() {
               </li>
 
               <li className="nav-item">
-                <NavLink
-                    to="/shop"
-                    isActive={() => shopRoutes.includes(pathname)}
-                    className="nav-link"
-                >
-                  Shop <i className="bx bx-chevron-down chevron-display"></i>
-                  <span className="plus_icon">+</span>
+                <NavLink to="/contact" className="nav-link">
+                  Эко
                 </NavLink>
-                <ul className="dropdown-menu">
-                  <li className="nav-item">
-                    <NavLink to="/shop" className="nav-link">
-                      Shop
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/shop-list-view" className="nav-link">
-                      Shop List View
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/shop-left-sidebar" className="nav-link">
-                      Shop Left Sidebar
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/shop-right-sidebar" className="nav-link">
-                      Shop Right Sidebar
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/shop-full-width" className="nav-link">
-                      Shop Full Width
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/cart" className="nav-link">
-                      Cart
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/wishlist" className="nav-link">
-                      Wishlist
-                    </NavLink>
-                  </li>
-
-                  <li className="nav-item">
-                    <NavLink to="/checkout" className="nav-link">
-                      Checkout
-                    </NavLink>
-                  </li>
-                </ul>
               </li>
 
               <li className="nav-item">
@@ -347,7 +226,7 @@ function Navbar() {
                     isActive={() => blogRoutes.includes(pathname)}
                     className="nav-link"
                 >
-                  Blog <i className="bx bx-chevron-down chevron-display"></i>
+                  Для родителей <i className="bx bx-chevron-down chevron-display"></i>
                   <span className="plus_icon">+</span>
                 </NavLink>
                 <ul className="dropdown-menu">
@@ -391,19 +270,30 @@ function Navbar() {
 
               <li className="nav-item">
                 <NavLink to="/contact" className="nav-link">
-                  Contact
+                  Контакты
                 </NavLink>
               </li>
 
+              <li className="nav-item">
+                <NavLink to="/cart" className="nav-link">
+                  Корзина
+                </NavLink>
+              </li>
+<span>
+              <Link to="/cart">
+                <i className="flaticon-shopping-cart"></i>
+                {cartContext.cartItems && cartContext.cartItems.length > 0 && (
+                    <span>{cartContext.cartItems.length}</span>
+                )}
+              </Link>
+</span>
+
+
+
             </ul>
             <div className="others-option d-flex align-items-center">
-              <div className="option-item  respo-nav">
-                <Link to="/cart">
-                  <i className="flaticon-shopping-cart"></i>
-                  {cartContext.cartItems && cartContext.cartItems.length > 0 && (
-                      <span>{cartContext.cartItems.length}</span>
-                  )}
-                </Link>
+              <div className="option-item respo-nav">
+
                 <div>
                   UAH
                   {cartContext.cartItems &&

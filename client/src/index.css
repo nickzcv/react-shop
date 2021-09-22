@@ -869,13 +869,12 @@ h6:last-child {
 .main-navbar .navbar .navbar-nav .nav-item a:hover,
 .main-navbar .navbar .navbar-nav .nav-item a:focus,
 .main-navbar .navbar .navbar-nav .nav-item a.active {
-  color: #fff;
-  background-color: #136;
+  color: deeppink;
+
 }
 .main-navbar .navbar .navbar-nav .nav-item:hover a,
 .main-navbar .navbar .navbar-nav .nav-item.active a {
-  color: #fff;
-  background-color: #136;
+  color: deeppink;
 }
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
   border: none;
@@ -922,7 +921,7 @@ h6:last-child {
   .dropdown-menu
   .nav-item
   .nav-link.active {
-  color: #ed1d24;
+  color: deeppink;
 }
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu li a i {
   margin: 0;
@@ -1653,7 +1652,7 @@ h6:last-child {
   .megamenu-submenu
   li
   a.active {
-  color: #ed1d24;
+  color: deeppink;
 }
 .main-navbar .navbar .navbar-nav .nav-item.megamenu:hover .dropdown-menu {
   margin-top: 0 !important;
@@ -2073,7 +2072,7 @@ h6:last-child {
     #aac4e0,
     #99b9da
   );
-  height: 730px;
+  height: 600px;
 }
 .main-slider-item-box {
   background-image: url(assets/img/main-slider/slider-bg-1.jpg);
@@ -3252,7 +3251,7 @@ h6:last-child {
   margin-top: 25px;
 }
 .single-blog .blog-content span {
-  font-size: #777;
+  font-size: 16px;
   color: #656565;
   font-weight: 400;
 }
