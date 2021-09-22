@@ -8826,3 +8826,25 @@ blockquote p,
 .single-offer-products .offer-products-content {
   margin-left: 22px;
 }
+
+.cartIcon {
+  position: absolute;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  background-image: url(./assets/img/icons/cart.svg);
+  background-size: cover;
+}
+
+.cartCounter {
+  position: absolute;
+  left: 27px;
+  top: -3px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  background-color: deeppink;
+  padding: 0 4px;
+  border-radius: 5px;
+  opacity: .7;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 //actions
 import { listProducts } from '../../redux/Product/ProductAction';
@@ -18,8 +19,7 @@ import SpecialOffer from '../../components/Home/Home-one/SpecialOffer';
 import SpecialProducts from '../../components/Home/Home-one/SpecialProducts';
 import QuickView from '../../components/Products/QuickView';
 import Preloader from '../../components/Common/Preloader';
-import cartContext from '../../contexts/cart-context';
-import './Home.scss';
+import cartContext from '../../contexts/cart-context';import './Home.scss';
 
 function Home() {
   const [product, setProduct] = useState({});
@@ -66,6 +66,10 @@ function Home() {
 
   return (
     <div className="home-wrapper">
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Nested component" />
+      </Helmet>
       {isLoading === true ? (
         <Preloader />
       ) : (

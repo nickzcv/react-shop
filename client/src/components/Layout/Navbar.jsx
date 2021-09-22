@@ -279,14 +279,14 @@ function Navbar() {
                   Корзина
                 </NavLink>
               </li>
-<span>
-              <Link to="/cart">
-                <i className="flaticon-shopping-cart"></i>
-                {cartContext.cartItems && cartContext.cartItems.length > 0 && (
-                    <span>{cartContext.cartItems.length}</span>
-                )}
-              </Link>
-</span>
+              <span className="relative">
+                <Link to="/cart">
+                  <div className="cartIcon"></div>
+                  {cartContext.cartItems && cartContext.cartItems.length > 0 && (
+                    <span className="cartCounter">{cartContext.cartItems.length}</span>
+                  )}
+                </Link>
+              </span>
 
 
 
@@ -313,14 +313,7 @@ function Navbar() {
       <div className="others-option-for-responsive">
         <div className="container">
           <div className="responsive-logo">
-            <span>Econix</span>
-          </div>
-          <div className="dot-menu" onClick={() => toggleHotline()}>
-            <div className="inner">
-              <div className="circle circle-one"></div>
-              <div className="circle circle-two"></div>
-              <div className="circle circle-three"></div>
-            </div>
+            <Link to={'/'}><img src={logo} alt="image" /></Link>
           </div>
 
           <div className="hamburger-menu" onClick={() => toggleMenu()}>
@@ -330,19 +323,7 @@ function Navbar() {
               <i className="bx bx-menu"></i>
             )}
           </div>
-
-          <div className={active ? 'active container' : 'container'}>
-            <div className="option-inner">
-              <div className="others-option d-flex align-items-center">
-                <div className="option-item">
-                  <span>
-                    Hotline:
-                    <a href="tel:16545676789">(+1) 654 567 – 6789</a>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          v
         </div>
       </div>
     </div>
