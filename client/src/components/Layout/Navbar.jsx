@@ -3,9 +3,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, useLocation, useHistory } from 'react-router-dom';
 import './Navbar.scss';
 import logo from '../../assets/img/RomaDomaLogo.svg';
-import AuthContext from '../../contexts/auth-context';
+
 import CartContext from '../../contexts/cart-context';
-const homeRoutes = ['/', '/home-two', '/home-three', '/home-four'];
+
 const pagesRoutes = [
   '/about',
   '/our-team',
@@ -214,10 +214,11 @@ function Navbar() {
                 </ul>
               </li>
 
-              <li className="nav-item">
-                <NavLink to="/contact" className="nav-link">
+              <li className="nav-item eco">
+                <NavLink to="/eco" className="nav-link">
                   Эко
                 </NavLink>
+                <span className="ecoIcon"></span>
               </li>
 
               <li className="nav-item">
@@ -323,7 +324,6 @@ function Navbar() {
               <i className="bx bx-menu"></i>
             )}
           </div>
-          v
         </div>
       </div>
     </div>

@@ -32,9 +32,8 @@ const Banner = () => {
                     <b>Новинка</b>
                     <h1>Развивающая игрушка 3D-панорама Стройка</h1>
                     <p>
-                      3D-панорама Стройка отлично подойдет в качестве развивающего пособия, придумывая разные варианты игр и заданий.
+                      3D-панорама Cтройка отлично подойдет в качестве развивающего пособия, придумывая разные варианты игр и заданий.
                     </p>
-
                     <div className="slider-btn">
                       <Link to="/shop" className="default-btn">
                         <i className="flaticon-shopping-cart"></i>
@@ -46,8 +45,12 @@ const Banner = () => {
                 </div>
 
                 <div className="col-lg-6">
+
                   <div className="main-slider-image">
+
+
                     <img src={woodyBuilder} alt="image" />
+
                   </div>
                 </div>
               </div>

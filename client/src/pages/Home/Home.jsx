@@ -38,7 +38,7 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       setisLoading(false);
-    }, 2000);
+    }, 1000);
   }, []);
 
   const showQuickView = (product) => {
@@ -67,8 +67,8 @@ function Home() {
   return (
     <div className="home-wrapper">
       <Helmet>
-        <title>My Title</title>
-        <meta name="description" content="Nested component" />
+        <title>Гипоаллергенные развивающие игрушки и конструкторы из дерева. У нас можно купить деревянные развивающие Эко игрушки с доставкой по всей Украине.</title>
+        <meta name="description" content="Развивающие игрушки и конструкторы от производителя. Купить деревянные эко игрушки, развивающие игры, Цвик-Арт и Нить-Арт" />
       </Helmet>
       {isLoading === true ? (
         <Preloader />
