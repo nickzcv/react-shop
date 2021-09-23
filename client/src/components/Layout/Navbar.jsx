@@ -85,8 +85,6 @@ function Navbar() {
               <Link to={'/'}><img src={logo} alt="image" /></Link>
             </div>
             <ul className="navbar-nav responsive-menu">
-
-
               <li className="nav-item megamenu">
                 <NavLink
                     to="/about"
@@ -275,35 +273,34 @@ function Navbar() {
                 </NavLink>
               </li>
 
-              <li className="nav-item">
-                <NavLink to="/cart" className="nav-link">
-                  Корзина
-                </NavLink>
-              </li>
-              <span className="relative">
-                <Link to="/cart">
-                  <div className="cartIcon"></div>
-                  {cartContext.cartItems && cartContext.cartItems.length > 0 && (
-                    <span className="cartCounter">{cartContext.cartItems.length}</span>
-                  )}
-                </Link>
-              </span>
 
 
 
             </ul>
             <div className="others-option d-flex align-items-center">
               <div className="option-item respo-nav">
-
                 <div>
-                  UAH
-                  {cartContext.cartItems &&
-                  cartContext.cartItems.reduce((count, curItem) => {
-                    return (
-                        count +
-                        parseInt(curItem.price) * parseInt(curItem.quantity || 0)
-                    );
-                  }, 0)}
+                 <span className="relative">
+                    <Link to="/cart">
+                      <div className="cartIcon"></div>
+                      {cartContext.cartItems && cartContext.cartItems.length > 0 && (
+                          <span className="cartCounter">{cartContext.cartItems.length}</span>
+                      )}
+                    </Link>
+                  </span>
+{/*
+
+                  <NavLink to="/cart" className="nav-link">
+                    {cartContext.cartItems &&
+                    cartContext.cartItems.reduce((count, curItem) => {
+                      return (
+                          count +
+                          parseInt(curItem.price) * parseInt(curItem.quantity || 0)
+                      );
+                    }, 0)}
+                  </NavLink>
+*/}
+
                 </div>
               </div>
             </div>

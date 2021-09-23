@@ -2059,25 +2059,8 @@ h6:last-child {
   }
 }
 .main-slider-item {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#ffffff),
-    color-stop(#ccdbec),
-    color-stop(#bbcfe6),
-    color-stop(#aac4e0),
-    to(#99b9da)
-  );
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #ccdbec,
-    #bbcfe6,
-    #aac4e0,
-    #99b9da
-  );
-  height: 600px;
+  background-image: url(./assets/img/pastelBG.jpg);
+  background-repeat: repeat-x;
 }
 .main-slider-item-box {
   background-image: url(assets/img/main-slider/slider-bg-1.jpg);
@@ -3601,7 +3584,7 @@ h6:last-child {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.3),
         rgba(255, 255, 255, 0.0)
-  ), url(./assets/img/img_1.png);
+  ), url(./assets/img/pastelBG.jpg);
   background-repeat:  no-repeat, repeat-x;
 
 }
@@ -8698,10 +8681,6 @@ blockquote p,
   color: #fff;
 }
 
-.option-item a {
-  margin-left: 5px;
-}
-
 .pagination-area {
   display: flex;
   justify-content: center;
@@ -8841,7 +8820,7 @@ blockquote p,
 
 .cartIcon {
   position: absolute;
-  top: 5px;
+  top: -20px;
   height: 30px;
   width: 30px;
   background-image: url(./assets/img/icons/cart.svg);
@@ -8850,11 +8829,11 @@ blockquote p,
 
 .cartCounter {
   position: absolute;
-  left: 25px;
-  top: 0px;
-  font-size: 13px;
+  left: 30px;
+  top: -30px;
+  font-size: 14px!important;
   font-weight: bold;
-  color: white;
+  color: white!important;
   background-color: deeppink;
   padding: 0 4px;
   border-radius: 5px;
