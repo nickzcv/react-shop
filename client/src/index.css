@@ -40,10 +40,10 @@ i {
   height: 100%;
 }
 .d-table-cell {
-  vertical-align: middle;
+/*  vertical-align: middle;
   background-image: url(./assets/img/vawesBg2.png);
   background-repeat: no-repeat;
-  background-position-y: 100%;
+  background-position-y: 100%;*/
 }
 img {
   max-width: 100%;
@@ -2059,8 +2059,10 @@ h6:last-child {
   }
 }
 .main-slider-item {
-  background-image: url(./assets/img/pastelBG.jpg);
-  background-repeat: repeat-x;
+  background-image: url(./assets/img/bg/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
 }
 .main-slider-item-box {
   background-image: url(assets/img/main-slider/slider-bg-1.jpg);
@@ -2396,32 +2398,20 @@ h6:last-child {
 .single-support {
   position: relative;
 }
-.single-support::before {
-  position: absolute;
-  right: 0;
-  top: -12px;
-  width: 1px;
-  content: '';
-  height: 45px;
-  background-color: #ccc;
-}
+
 .single-support .icon {
   position: absolute;
   left: 0;
-  top: -14px;
 }
-.single-support .icon i {
-  font-size: 45px;
-  line-height: 1;
-  color: #136;
-}
+
 .single-support .support-content {
   padding-left: 55px;
 }
 .single-support .support-content h3 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 0;
+  line-height: 20px;
 }
 .single-support-box {
   text-align: center;
@@ -3584,7 +3574,7 @@ h6:last-child {
         rgba(255, 255, 255, 0.6),
         rgba(255, 255, 255, 0.3),
         rgba(255, 255, 255, 0.0)
-  ), url(./assets/img/pastelBG.jpg);
+  ), url(./assets/img/bg/blueBg.jpg);
   background-repeat:  no-repeat, repeat-x;
 
 }
@@ -8847,5 +8837,33 @@ blockquote p,
   height: 20px;
   width: 20px;
   background-image: url(./assets/img/icons/eco.svg);
+  background-size: cover;
+}
+
+.ecoToys {
+  height: 40px;
+  width: 40px;
+  background-image: url(./assets/img/icons/eco-toys.svg);
+  background-size: cover;
+}
+
+.ecoPaint {
+  height: 40px;
+  width: 40px;
+  background-image: url(./assets/img/icons/eco-paints.svg);
+  background-size: cover;
+}
+
+.ecoHouse {
+  height: 40px;
+  width: 40px;
+  background-image: url(./assets/img/icons/eco-house.svg);
+  background-size: cover;
+}
+
+.belarus {
+  height: 40px;
+  width: 40px;
+  background-image: url(./assets/img/icons/bel.svg);
   background-size: cover;
 }

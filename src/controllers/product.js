@@ -88,7 +88,7 @@ exports.deleteProduct = async (req, res) => {
 exports.editProduct = async (req, res) => {
   try {
     const prodId = req.body.product_id;
-    const name = req.body.product_name;
+    const title = req.body.product_title;
     const description = req.body.product_description;
     const type = req.body.product_type;
     const price = req.body.product_price;
@@ -100,7 +100,7 @@ exports.editProduct = async (req, res) => {
       { _id: prodId },
       {
         $set: {
-          name,
+          title,
           description,
           type,
           price,

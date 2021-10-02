@@ -1,53 +1,41 @@
 function Support({ paddingClass = null }) {
   return (
     <section className={'support-area ' + paddingClass}>
-      <div className="container">
+      <div className="container-fluid">
         <div className="support-inner-box">
           <div className="row">
             <div className="col-lg-3 col-md-6">
               <div className="single-support">
-                <div className="icon">
-                  <i className="flaticon-free-shipping"></i>
-                </div>
-
+                <span className="icon ecoToys"></span>
                 <div className="support-content">
-                  <h3>Free Shipping Worldwide</h3>
+                  <h3>Развивающие игрушки для творчества в Украине</h3>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
               <div className="single-support">
-                <div className="icon">
-                  <i className="flaticon-return"></i>
-                </div>
-
+                <span className="icon ecoHouse"></span>
                 <div className="support-content">
-                  <h3>30 Days Money Returns</h3>
+                  <h3>Натуральное дерево: береза, ольха</h3>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
               <div className="single-support">
-                <div className="icon">
-                  <i className="flaticon-security"></i>
-                </div>
-
+                <span className="icon ecoPaint"></span>
                 <div className="support-content">
-                  <h3>100% Secure Payment</h3>
+                  <h3>Гипоаллергенные эко краски для игрушек из Италии</h3>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-3 col-md-6">
               <div className="single-support">
-                <div className="icon">
-                  <i className="flaticon-support"></i>
-                </div>
-
+                <span className="icon belarus"></span>
                 <div className="support-content">
-                  <h3>24/7 Customer Support</h3>
+                  <h3>Производство в Беларуси</h3>
                 </div>
               </div>
             </div>

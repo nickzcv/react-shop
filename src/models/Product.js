@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
-  name: {
+  code: String,
+  title: {
     type: String,
     required: true,
   },
@@ -10,14 +11,13 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
-  type: {
-    type: String,
-    required: true,
-  },
-  images: {
-    type: String,
-    required: true,
-  },
+  images: [
+    {
+      alt: String,
+      href: String,
+      position: Number,
+    }
+  ],
   image_public_id: {
     type: String,
     required: false
@@ -26,30 +26,29 @@ const productSchema = new Schema({
     type: String,
     required: true,
   },
-  color: {
+  price_drop: {
     type: String,
     required: true,
   },
-  ratings: {
+  size: {
     type: String,
-    required: false,
   },
-  reviews: [
-    {
-      title: String,
-      text: String,
-      rating: String,
-      username: String,
-      createdAt: String,
-    },
-  ],
-  total_in_stock: {
-    type: Number,
+  material: {
+    type: String,
+  },
+  additionalDetails: {
+    type: String,
+  },
+  available: {
+    type: Boolean,
     required: true,
   },
-  createdAt: {
-    type: String,
-    required: true,
+  createdDate: {
+    type: Date,
+    default: Date.now
+  },
+  updatedDate: {
+    type: Date,
   },
 });
 

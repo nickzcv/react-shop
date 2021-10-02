@@ -1,48 +1,32 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
-  userId: {
+  customer_name: {
     type: String,
     required: true,
   },
-  user_first_name: {
+  customer_email: {
     type: String,
     required: true,
   },
-  user_last_name: {
+  customer_phone: {
     type: String,
     required: true,
   },
-  company_name: {
-    type: String,
-    required: false,
-  },
-  user_email: {
+  customer_address: {
     type: String,
     required: true,
   },
-  user_phone: {
+  customer_city: {
     type: String,
     required: true,
   },
-  user_country: {
+  customer_post_index: {
     type: String,
     required: true,
   },
-  user_address: {
-    type: String,
-    required: true,
-  },
-  user_city: {
-    type: String,
-    required: true,
-  },
-  user_postcode: {
-    type: String,
-    required: true,
-  },
-  user_order_notes: {
+  customer_order_notes: {
     type: String,
     required: false,
   },
@@ -50,15 +34,17 @@ const orderSchema = new Schema({
     type: Number,
     default: 0.0,
   },
-
-  isPaid: {
-    type: Boolean,
-    default: false,
-  },
+  isPaid: Boolean,
   isDelivered: {
     type: Boolean,
     default: false,
   },
+  products: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
 });
 
-module.exports = mongoose.model("Order", orderSchema);
+module.exports = mongoose.model('Order', orderSchema);
