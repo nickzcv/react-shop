@@ -8,7 +8,6 @@ function CartArea() {
   const context = useContext(CartContext);
 
   const updateQuantity = (cartItem, quantity) => {
-    console.log(quantity);
     if (quantity < 0) return;
     let currentItem = {
       _id: cartItem._id,

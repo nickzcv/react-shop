@@ -33,18 +33,17 @@ app.use(
 // When you upload a file, the file will be accessible from req.files
 app.use(fileUpload({}));
 // Database connection
-db.connectDb().catch(error => console.log(error));
+db.connectDb().catch((error) => console.log(error));
 // Routes
 app.use('/products', productRoutes);
 app.use('/user', userRoutes);
 app.use('/order', orderRoutes);
 // Run Prod
-production && (
+production &&
   app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-  })
-)
+  });
 // Start point
-app.listen(process.env.PORT || port, function() {
-    console.log('Site started!');
+app.listen(process.env.PORT || port, function () {
+  console.log('Site started!');
 });

@@ -8,7 +8,6 @@ import { passwordReset } from '../../redux/ResetPassword/PasswordAction';
 const PasswordResetArea = () => {
   const dispatch = useDispatch();
   const { message } = useSelector((state) => state.PasswordReducer);
-  console.log('pass', message);
 
   const [formData, setFormData] = useState({
     email: '',

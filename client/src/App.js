@@ -72,7 +72,6 @@ function App() {
         return cartItem;
       });
     if (exist) {
-      console.log(newState);
       setCartItems(newState);
       localStorage.setItem('cart-items', JSON.stringify(newState));
     } else {

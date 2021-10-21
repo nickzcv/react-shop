@@ -1,5 +1,5 @@
-const Order = require("../models/Order");
-const { validateOrder } = require("../utils/validators");
+const Order = require('../models/Order');
+const { validateOrder } = require('../utils/validators');
 
 exports.addOrderInfo = async (req, res) => {
   try {
@@ -51,7 +51,7 @@ exports.addOrderInfo = async (req, res) => {
     });
     await order.save();
     res.status(200).json({
-      message: "Order successfully added",
+      message: 'Order successfully added',
     });
   } catch (err) {
     res.status(500);
@@ -60,7 +60,7 @@ exports.addOrderInfo = async (req, res) => {
 
 exports.fetchOrders = async (req, res) => {
   try {
-    const orders = await Order.find({}).populate("user", "id name");
+    const orders = await Order.find({}).populate('user', 'id name');
     res.json(orders);
   } catch (err) {
     res.status(500);
@@ -78,6 +78,6 @@ exports.updateOrderToDelivered = async (req, res) => {
     res.json(updatedOrder);
   } else {
     res.status(404);
-    throw new Error("Order not found");
+    throw new Error('Order not found');
   }
 };

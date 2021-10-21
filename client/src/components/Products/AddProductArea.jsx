@@ -30,7 +30,6 @@ function AddProductArea() {
       .post('https://api.cloudinary.com/v1_1/dbfjc9i9f/image/upload', formData)
       .then((res) => {
         if (res.statusText === 'OK') {
-          console.log(res);
           let image_public_id = res.data.public_id;
           formData.append('image_public_id', image_public_id);
           return axios

@@ -16,11 +16,11 @@ const productSchema = new Schema({
       alt: String,
       href: String,
       position: Number,
-    }
+    },
   ],
   image_public_id: {
     type: String,
-    required: false
+    required: false,
   },
   price: {
     type: String,
@@ -45,7 +45,7 @@ const productSchema = new Schema({
   },
   createdDate: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updatedDate: {
     type: Date,

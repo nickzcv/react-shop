@@ -1,4 +1,4 @@
-const Product = require("../models/Product");
+const Product = require('../models/Product');
 
 exports.fetchProducts = async (req, res) => {
   try {
@@ -9,7 +9,7 @@ exports.fetchProducts = async (req, res) => {
       ? {
           name: {
             $regex: req.query.keyword,
-            $options: "i",
+            $options: 'i',
           },
         }
       : {};
@@ -52,7 +52,7 @@ exports.addProduct = async (req, res) => {
     await product.save();
 
     return res.status(200).json({
-      message: "Product added",
+      message: 'Product added',
     });
   } catch (err) {
     res.status(500);
@@ -79,7 +79,7 @@ exports.deleteProduct = async (req, res) => {
     await Product.deleteOne({ _id: productId });
     const products = await Product.find({});
 
-    return res.status(200).json({ message: "Successfully Deleted", products });
+    return res.status(200).json({ message: 'Successfully Deleted', products });
   } catch (err) {
     res.status(500);
   }
@@ -111,7 +111,7 @@ exports.editProduct = async (req, res) => {
       }
     );
     res.status(200).json({
-      message: "Product edited",
+      message: 'Product edited',
     });
   } catch (err) {
     res.status(500);

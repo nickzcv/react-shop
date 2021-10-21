@@ -18,7 +18,7 @@ exports.postLogin = async (req, res) => {
         errors,
       });
     }
-    console.log(email)
+    console.log(email);
     const user = await User.findOne({
       email,
     });
@@ -30,7 +30,7 @@ exports.postLogin = async (req, res) => {
     }
 
     const isEqual = await bcrypt.compare(password, user.password);
-    console.log(isEqual)
+    console.log(isEqual);
     if (!isEqual) {
       return res.status(401).json({
         error: "Email or password isn't matched",
@@ -38,11 +38,11 @@ exports.postLogin = async (req, res) => {
     }
 
     const token = genAccTkn.generateAccessToken(user);
-    console.log(token)
+    console.log(token);
     return res.status(200).json({
       id: user.id,
       token,
-      tokenExpiration: "24h",
+      tokenExpiration: '24h',
     });
   } catch (err) {
     res.status(500);
@@ -96,7 +96,7 @@ exports.postRegister = async (req, res) => {
     await user.save();
 
     res.status(200).json({
-      message: "User created",
+      message: 'User created',
     });
   } catch (err) {
     res.status(500);
@@ -122,13 +122,13 @@ exports.checkRole = async (req, res) => {
     const userId = req.body.userId;
     const user = await User.findById({ _id: userId });
 
-    if (user.role === "user") {
+    if (user.role === 'user') {
       res.status(200).json({
-        role: "user",
+        role: 'user',
       });
     } else {
       res.status(200).json({
-        role: "admin",
+        role: 'admin',
       });
     }
   } catch (err) {
@@ -162,13 +162,13 @@ exports.passwordReset = async (req, res) => {
     const hashedPassword = await bcrypt.hash(newpassword, 12);
 
     user.password = hashedPassword;
-    const updateUserPassword = await user.save()
+    const updateUserPassword = await user.save();
     const token = genAccTkn.generateAccessToken(user);
     return res.status(200).json({
       id: user.id,
       token,
-      tokenExpiration: "24h",
-      message: 'Password has been updated'
+      tokenExpiration: '24h',
+      message: 'Password has been updated',
     });
   } catch (err) {
     res.status(500);

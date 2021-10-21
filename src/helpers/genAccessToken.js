@@ -1,4 +1,4 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 // generating access token
 exports.generateAccessToken = (user = {}) => {
@@ -10,7 +10,7 @@ exports.generateAccessToken = (user = {}) => {
     },
     process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: "24h",
+      expiresIn: '24h',
     }
   );
 };

@@ -38,7 +38,7 @@ const UserSchema = new Schema({
   orders: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Product",
+      ref: 'Product',
     },
   ],
   email_confirmation: {
