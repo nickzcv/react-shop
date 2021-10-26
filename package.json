@@ -1,5 +1,5 @@
 {
-  "name": "Woody_toys_back",
+  "name": "RomaDoma_back",
   "version": "0.0.1",
   "description": "",
   "main": "src/server.js",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nickzcv/woody-toys"
+    "url": "https://github.com/nickzcv/react-shop.git"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
