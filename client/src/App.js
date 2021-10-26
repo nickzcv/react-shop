@@ -5,8 +5,6 @@ import toast, { Toaster } from 'react-hot-toast';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Search from './pages/About/Search';
-import Login from './pages/Authentications/Login';
-import Register from './pages/Authentications/Register';
 import ResetPassword from './pages/Authentications/ResetPassword';
 import OurTeam from './pages/About/OurTeam';
 import PricingPlans from './pages/About/PricingPlans';
@@ -40,11 +38,8 @@ import User from './pages/User/User';
 import Products from './pages/Products/Products';
 import ComingSoon from './pages/About/ComingSoon';
 
-import AuthContext from './contexts/auth-context';
 import CartContext from './contexts/cart-context';
 
-import MiddleHeader from './components/Layout/MiddleHeader';
-import ShopArea from './components/Shop/ShopArea';
 import Navbar from './components/Layout/Navbar';
 
 function App() {

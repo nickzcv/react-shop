@@ -1,7 +1,9 @@
 {
-  "name": "React-shop",
-  "version": "0.1.0",
+  "name": "Woody_toys_front",
+  "version": "0.0.1",
   "private": true,
+  "author": "Nick Z",
+  "license": "ISC",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
