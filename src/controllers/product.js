@@ -49,11 +49,17 @@ exports.addProduct = async (req, res) => {
       createdAt: new Date().toISOString(),
     });
 
-    await product.save();
-
-    return res.status(200).json({
-      message: 'Product added',
+    await product.save().then(item => {
+      console.log(item);
+      return res.status(200).json({
+        message: 'Product added',
+      });
+    })
+    .catch(error => {
+      res.status(400).send(`Unable to save into database. ${error}`);
     });
+
+
   } catch (err) {
     res.status(500);
   }

@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const fileUpload = require('express-fileupload');
+// ---------------
 const logger = require('morgan');
+// ---------------
 // Database configuration
 const db = require('./config/db');
 // Routing
@@ -16,11 +18,13 @@ const production = process.env.NODE_ENV === 'production';
 require('dotenv').config();
 // Init Express
 const app = express();
-const port = 5000;
+
 // Load Prod env
 production && app.use(express.static(path.join(__dirname, '../client/build')));
+// ---------------
 // Run logger
 app.use(logger('dev'));
+// ---------------
 // Parse incoming request bodies in a middleware before your handlers
 // available under the req.body property
 app.use(bodyParser.json());
@@ -38,6 +42,7 @@ db.connectDb().catch((error) => console.log(error));
 app.use('/products', productRoutes);
 app.use('/user', userRoutes);
 app.use('/order', orderRoutes);
+console.log(production)
 // Run Prod
 production &&
   app.get('/*', (req, res) => {
@@ -45,5 +50,5 @@ production &&
   });
 // Start point
 app.listen(process.env.PORT || port, function () {
-  console.log('Site started!');
+  console.log(`Site Woody-toys started on port: ${process.env.PORT}`);
 });

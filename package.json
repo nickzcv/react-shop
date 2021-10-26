@@ -1,18 +1,30 @@
 {
-  "name": "RomaDoma",
-  "version": "1.0.0",
+  "name": "Woody_toys_back",
+  "version": "0.0.1",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/server",
-    "server": "nodemon src/server",
+    "start": "node src/server.js",
+    "server": "nodemon src/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "format": "prettier --write src/**/*"
   },
-  "keywords": [],
-  "author": "Nick Zaitsev",
+  "keywords": [
+    "node",
+    "express",
+    "mongoose",
+    "mongodb"
+  ],
   "license": "ISC",
+  "engines": {
+    "node": "14.x",
+    "npm": "6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickzcv/woody-toys"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
